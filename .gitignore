@@ -1,0 +1,32 @@
+# macOS / Windows metadata
+.DS_Store
+Thumbs.db
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+
+# Dependency and tool caches
+node_modules/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+coverage/
+
+# Logs and local editor state
+*.log
+.idea/
+.vscode/
+
+# Archives and temporary generated files
+*.zip
+*.tar
+*.tar.gz
+*.tmp
+*.swp
+*~

@@ -1,0 +1,69 @@
+:root {
+  /* Core palette */
+  --color-bg: #120f0d;
+  --color-text: #f5efe6;
+  --color-text-muted: rgba(245, 239, 230, 0.68);
+  --color-line: rgba(255, 244, 230, 0.20);
+  --color-panel: rgba(23, 19, 16, 0.93);
+  --color-scrim-top: rgba(12, 9, 8, 0.82);
+  --color-paper: #d8c9b4;
+  --color-paper-muted: #c7b59d;
+  --color-ink: #241b16;
+  --color-line-warm: rgba(231, 209, 180, 0.24);
+
+  /* Typography */
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-ui: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Shared layout */
+  --page-gutter: clamp(30px, 6.6vw, 100px);
+  --content-max: 1240px;
+  --content-width: min(calc(100% - (var(--page-gutter) * 2)), var(--content-max));
+  --header-top: clamp(20px, 2.8vh, 32px);
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Shared case-study vertical rhythm */
+  --case-section-y: clamp(120px, 9vw, 152px);
+  --case-section-inner-gap: clamp(48px, 4.5vw, 72px);
+  --case-section-content-gap: clamp(28px, 3vw, 44px);
+
+  /* Type scale */
+  --brand-logo-width: clamp(150px, 11vw, 190px);
+  --type-page-h1: clamp(52px, 5.15vw, 82px);
+  --type-section-h2: clamp(34px, 3.2vw, 56px);
+  --type-body-lg: clamp(16px, 1.15vw, 19px);
+  --type-body: clamp(14px, 0.95vw, 16px);
+  --type-eyebrow: clamp(8px, 0.68vw, 11px);
+
+  /* Motion */
+  --ease-cinematic: cubic-bezier(0.2, 0.72, 0.18, 1);
+  --duration-ui: 220ms;
+  --duration-state: 420ms;
+  --duration-camera: 720ms;
+}
+
+@media (max-width: 760px) {
+  :root {
+    --case-section-y: clamp(80px, 20vw, 96px);
+    --case-section-inner-gap: clamp(36px, 10vw, 52px);
+    --case-section-content-gap: clamp(24px, 7vw, 36px);
+  }
+}
+
+/* Keep existing aliases while migrating the current homepage. */
+:root {
+  --ivory: var(--color-text);
+  --muted: var(--color-text-muted);
+  --line: var(--color-line);
+  --panel: var(--color-panel);
+}

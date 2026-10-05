@@ -1,0 +1,481 @@
+.fortress-case-study-page {
+  --project-accent: #f47a3a;
+  --project-accent-soft: rgba(244, 122, 58, 0.78);
+}
+
+.fortress-hero::before {
+  background:
+    radial-gradient(circle at 78% 38%, rgba(244, 122, 58, 0.16), transparent 30%),
+    radial-gradient(circle at 70% 72%, rgba(49, 103, 158, 0.12), transparent 34%),
+    linear-gradient(132deg, #0f0c0a 0%, #18110d 54%, #120f0d 100%);
+  filter: none;
+  transform: none;
+}
+
+.fortress-hero::after {
+  background:
+    linear-gradient(90deg, rgba(10, 8, 7, 0.96), rgba(12, 9, 7, 0.7) 55%, rgba(12, 9, 7, 0.22)),
+    linear-gradient(180deg, rgba(10, 8, 7, 0.42), transparent 46%, var(--color-bg));
+}
+
+.fortress-hero-media {
+  width: min(100%, 440px);
+}
+
+.media-placeholder {
+  --media-fit: contain;
+
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-line-warm);
+  background:
+    linear-gradient(135deg, rgba(244, 122, 58, 0.06), transparent 44%),
+    rgba(245, 239, 230, 0.025);
+  isolation: isolate;
+}
+
+.media-placeholder::before {
+  position: absolute;
+  z-index: -1;
+  inset: 12px;
+  content: "";
+  border: 1px solid rgba(245, 239, 230, 0.06);
+}
+
+.media-placeholder video,
+.media-placeholder img {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--media-fit);
+  opacity: 0;
+  transition: opacity var(--duration-state) var(--ease-cinematic);
+}
+
+.media-placeholder.has-media video,
+.media-placeholder.has-media img {
+  opacity: 1;
+}
+
+.media-placeholder.has-media .media-placeholder__fallback {
+  opacity: 0;
+}
+
+.media-placeholder--cover {
+  --media-fit: cover;
+}
+
+.media-placeholder--hero {
+  height: 100%;
+  min-height: 286px;
+}
+
+.media-placeholder--visual-language {
+  aspect-ratio: 4 / 3;
+}
+
+.media-placeholder--motion-preview {
+  aspect-ratio: 4 / 3;
+}
+
+.media-placeholder--icon-sheet {
+  aspect-ratio: 16 / 7.8;
+}
+
+.media-placeholder--icon-application {
+  aspect-ratio: var(--media-aspect-ratio, 3 / 4);
+}
+
+.media-placeholder--onboarding-sequence {
+  aspect-ratio: var(--media-aspect-ratio, 16 / 10);
+}
+
+.media-placeholder--loading-comparison {
+  aspect-ratio: var(--media-aspect-ratio, 16 / 10);
+}
+
+.media-placeholder--craft-static {
+  aspect-ratio: var(--media-aspect-ratio, 3 / 4);
+}
+
+.media-placeholder--craft-process {
+  aspect-ratio: var(--media-aspect-ratio, 16 / 9);
+}
+
+.media-placeholder__fallback {
+  display: grid;
+  gap: var(--space-2);
+  max-width: 360px;
+  padding: var(--space-7);
+  text-align: center;
+  transition: opacity var(--duration-state) var(--ease-cinematic);
+}
+
+.media-placeholder__fallback span {
+  color: var(--color-text-muted);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.media-placeholder__fallback strong {
+  color: rgba(245, 239, 230, 0.88);
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.fortress-challenge-list {
+  display: grid;
+  margin: var(--case-section-inner-gap) 0 0;
+  padding: 0;
+  border-top: 1px solid var(--color-line-warm);
+}
+
+.fortress-challenge-list div {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.28fr) minmax(0, 1fr);
+  gap: var(--case-section-content-gap);
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.fortress-challenge-list dt,
+.fortress-decision-index,
+.fortress-visual-language-grid figcaption span {
+  margin: 0;
+  color: var(--project-accent-soft);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.fortress-challenge-list dd {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.fortress-visual-language-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--case-section-content-gap);
+  margin-top: var(--case-section-inner-gap);
+}
+
+.fortress-visual-language-grid figure,
+.fortress-icon-proof figure {
+  margin: 0;
+}
+
+.fortress-visual-language-grid figcaption,
+.fortress-icon-proof figcaption {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.fortress-visual-language-grid figcaption span {
+  margin-right: var(--space-2);
+}
+
+.fortress-outcome-lines {
+  margin: 0;
+}
+
+.fortress-outcome-lines div {
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--color-line-warm);
+}
+
+.fortress-outcome-lines div:last-child {
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.fortress-outcome-lines dt {
+  color: var(--project-accent-soft);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.fortress-outcome-lines dd {
+  margin: var(--space-3) 0 0;
+  color: rgba(245, 239, 230, 0.78);
+}
+
+.fortress-icon-spotlight {
+  margin-top: var(--case-section-inner-gap);
+  padding-top: var(--case-section-inner-gap);
+  border-top: 1px solid var(--color-line-warm);
+}
+
+.fortress-icon-proof {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.55fr);
+  gap: var(--case-section-content-gap);
+  align-items: end;
+  margin: var(--case-section-inner-gap) 0 0;
+}
+
+.fortress-icon-proof figure {
+  display: grid;
+  align-content: end;
+}
+
+.fortress-craft-stages figcaption {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.fortress-motion-stories {
+  display: grid;
+  gap: var(--case-section-inner-gap);
+  margin-top: var(--case-section-inner-gap);
+}
+
+.fortress-motion-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+  gap: var(--case-section-inner-gap);
+  align-items: center;
+}
+
+.fortress-motion-story--reverse .fortress-motion-story__media {
+  grid-column: 2;
+}
+
+.fortress-motion-story--reverse .fortress-motion-story__copy {
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.fortress-motion-story--loading {
+  grid-template-columns: minmax(280px, 0.65fr) minmax(0, 1.35fr);
+}
+
+.fortress-motion-story__media {
+  margin: 0;
+}
+
+.fortress-loading-comparison {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.fortress-loading-comparison > figcaption {
+  color: var(--color-text-muted);
+}
+
+.fortress-loading-comparison > figcaption {
+  margin-top: var(--space-2);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+.fortress-motion-heading {
+  max-width: 900px;
+}
+
+.fortress-motion-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--case-section-content-gap);
+  margin-top: var(--case-section-inner-gap);
+}
+
+.fortress-motion-example {
+  width: 100%;
+  margin: 0;
+}
+
+.fortress-motion-example figcaption {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.fortress-motion-example figcaption strong {
+  color: rgba(245, 239, 230, 0.9);
+}
+
+.fortress-motion-example figcaption span {
+  color: var(--color-text-muted);
+}
+
+.fortress-motion-story__copy {
+  padding-block: var(--space-5);
+}
+
+.fortress-motion-story h3 {
+  margin: var(--space-4) 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(40px, 5vw, 76px);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.fortress-motion-reasoning {
+  margin: var(--space-7) 0 0;
+}
+
+.fortress-motion-reasoning--compact {
+  margin-top: var(--space-5);
+}
+
+.fortress-motion-reasoning div {
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--color-line-warm);
+}
+
+.fortress-motion-reasoning div:last-child {
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.fortress-motion-reasoning dt,
+.fortress-craft-stages figcaption span {
+  color: var(--project-accent-soft);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.fortress-motion-reasoning dd {
+  margin: var(--space-2) 0 0;
+  color: var(--color-text-muted);
+}
+
+.fortress-craft-stages {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.65fr) minmax(0, 1.35fr);
+  gap: var(--case-section-content-gap);
+  align-items: end;
+  margin-top: var(--case-section-inner-gap);
+}
+
+.fortress-craft-stages figure {
+  margin: 0;
+}
+
+.fortress-craft-stages figcaption span {
+  margin-right: var(--space-2);
+}
+
+.fortress-outcome-lines {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--case-section-inner-gap);
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.fortress-outcome-lines div {
+  padding: var(--space-6) clamp(var(--space-4), 3vw, var(--space-7));
+  border-bottom: 0;
+}
+
+.fortress-outcome-lines div + div {
+  border-left: 1px solid var(--color-line-warm);
+}
+
+.fortress-outcome-lines div:last-child {
+  border-bottom: 0;
+}
+
+.fortress-conclusion-section {
+  position: relative;
+}
+
+.fortress-case-study-page .next-project a:hover i,
+.fortress-case-study-page .next-project a:focus-visible i {
+  color: var(--project-accent);
+  border-color: rgba(244, 122, 58, 0.56);
+}
+
+@media (max-width: 980px) {
+  .fortress-motion-story {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 0.72fr);
+  }
+
+  .fortress-motion-story--loading {
+    grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1fr);
+  }
+
+  .fortress-icon-proof {
+    grid-template-columns: minmax(0, 1.45fr) minmax(220px, 0.55fr);
+  }
+}
+
+@media (max-width: 760px) {
+  .fortress-hero-media {
+    width: 100%;
+  }
+
+  .media-placeholder--hero {
+    min-height: 300px;
+  }
+
+  .fortress-visual-language-grid,
+  .fortress-icon-proof,
+  .fortress-motion-gallery,
+  .fortress-motion-story,
+  .fortress-craft-stages,
+  .fortress-outcome-lines {
+    grid-template-columns: 1fr;
+  }
+
+  .fortress-outcome-lines div + div {
+    border-top: 1px solid var(--color-line-warm);
+    border-left: 0;
+  }
+
+  .fortress-challenge-list div {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .media-placeholder__fallback {
+    padding: var(--space-6);
+  }
+
+  .fortress-motion-story--reverse .fortress-motion-story__media,
+  .fortress-motion-story--reverse .fortress-motion-story__copy {
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .fortress-motion-story--reverse .fortress-motion-story__copy {
+    order: 2;
+  }
+
+  .fortress-motion-story--reverse .fortress-motion-story__media {
+    order: 1;
+  }
+
+  .fortress-outcome-lines div {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .media-placeholder video,
+  .media-placeholder img,
+  .media-placeholder__fallback {
+    transition: none;
+  }
+}

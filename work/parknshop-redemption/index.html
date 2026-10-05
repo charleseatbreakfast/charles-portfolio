@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PARKnSHOP Redemption case study by Charles Chau, Product Designer."
+    />
+    <title>PARKnSHOP Redemption — Charles Chau</title>
+    <link rel="stylesheet" href="../../styles/tokens.css" />
+    <link rel="stylesheet" href="../../styles/site-header.css" />
+    <link rel="stylesheet" href="../../styles/case-study.css" />
+    <link rel="stylesheet" href="../../styles/editorial-summary.css" />
+    <script src="../../site-header.js" defer></script>
+    <script src="../../case-study.js" defer></script>
+  </head>
+  <body class="case-study-page">
+    <a class="skip-link" href="#case-study">Skip to case study</a>
+    <site-header active="work" root="../.."></site-header>
+
+    <main id="case-study">
+      <header class="case-study-hero">
+        <div class="hero-copy">
+          <p class="section-kicker">PARKnSHOP · Redemption</p>
+          <h1>Redefining Redemption as an Attachment Strategy</h1>
+          <p class="hero-intro">
+            A funnel-led redesign that moved redemption from passive promotion content into the moments
+            where shopping intent was already strongest.
+          </p>
+
+          <dl class="project-meta" aria-label="Project details">
+            <div>
+              <dt>Role</dt>
+              <dd>Product Designer</dd>
+            </div>
+            <div>
+              <dt>Product</dt>
+              <dd>E-commerce · Mobile App</dd>
+            </div>
+            <div>
+              <dt>Period</dt>
+              <dd>Oct–Dec 2025</dd>
+            </div>
+            <div>
+              <dt>Scope</dt>
+              <dd>Funnel strategy · UX architecture · Interaction design · Prototyping</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="../../assets/projects/parknshop-redemption/hero-devices.png"
+            alt="PARKnSHOP redemption experience shown on two mobile product screens"
+            width="752"
+            height="588"
+            fetchpriority="high"
+          />
+          <figcaption>Redemption made actionable at the point of purchase intent.</figcaption>
+        </figure>
+      </header>
+
+      <section class="case-section impact-glance" aria-labelledby="impact-glance-title">
+        <div class="section-heading compact-heading">
+          <p class="section-kicker">Impact at a glance</p>
+          <h2 id="impact-glance-title">The redesigned journey improved attachment performance.</h2>
+        </div>
+        <dl class="metric-row">
+          <div>
+            <dt>+36%</dt>
+            <dd>Promotion Sales</dd>
+          </div>
+          <div>
+            <dt>+6%</dt>
+            <dd>Items per Basket</dd>
+          </div>
+          <div>
+            <dt>23.8%</dt>
+            <dd>Redemption ATC CVR</dd>
+          </div>
+        </dl>
+        <p class="metric-note">Project-reported outcomes from the redesigned redemption journey.</p>
+      </section>
+
+      <section class="case-section challenge-section" aria-labelledby="challenge-title">
+        <div class="section-heading">
+          <p class="section-kicker">The problem</p>
+          <h2 id="challenge-title">Not a visibility problem. A funnel-alignment problem.</h2>
+        </div>
+        <div class="challenge-grid">
+          <p class="lead">
+            Redemption existed as a separate promotion destination rather than supporting the decisions
+            that shaped a customer’s basket.
+          </p>
+          <p>
+            Customers had to find eligible offers, interpret conditions and remember them later—adding
+            effort while disconnecting redemption from shopping intent.
+          </p>
+          <ul class="evidence-list">
+            <li>
+              <span>01</span>
+              <p>Redemption items recorded a lower add-to-cart rate than regular products.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <p>Users spent unusually long on promotion pages without taking action.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <p>On PDPs, offers were passive and text-heavy despite high purchase intent.</p>
+            </li>
+            <li>
+              <span>04</span>
+              <p>On PLPs, redemption competed with primary products and diluted the task.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="case-section observations-section" aria-labelledby="observations-title">
+        <div class="editorial-split-heading">
+          <p class="section-kicker">Key observations</p>
+          <h2 id="observations-title">Two interfaces revealed the same underlying disconnect.</h2>
+          <p>
+            PDP made redemption passive at high intent; PLP made it compete with ordinary product discovery.
+          </p>
+        </div>
+
+        <div class="discovery-evidence" aria-label="Original problem-discovery evidence">
+          <figure class="evidence-figure evidence-figure--primary">
+            <div class="evidence-card-heading">
+              <p>Problem evidence · PDP</p>
+              <h3>Passive at the point of purchase intent.</h3>
+            </div>
+            <div class="evidence-media">
+              <img
+                src="../../assets/projects/parknshop-redemption/pdp-observation.png"
+                alt="Annotated original PDP showing redemption buried in text-heavy Other offers content"
+                width="2880"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              Redemption appeared as secondary, text-heavy information even at a high-intent decision moment.
+            </figcaption>
+          </figure>
+
+          <figure class="evidence-figure evidence-figure--primary">
+            <div class="evidence-card-heading">
+              <p>Problem evidence · PLP</p>
+              <h3>Competing with the customer’s primary task.</h3>
+            </div>
+            <div class="evidence-media">
+              <img
+                src="../../assets/projects/parknshop-redemption/plp-observation.png"
+                alt="Annotated original PLP showing redemption items mixed with regular products"
+                  width="2880"
+                  height="1600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              Eligible offers competed with the primary catalogue, weakening the redemption task and its intent.
+            </figcaption>
+          </figure>
+        </div>
+
+        <aside class="inference-callout editorial-split-heading" aria-label="Working hypothesis">
+          <p class="section-kicker">Working hypothesis</p>
+          <h3>The issue was not offer attractiveness.</h3>
+          <p>
+            Redemption lacked a defined decision moment in the purchase journey, creating friction and
+            missed attachment opportunities.
+          </p>
+        </aside>
+      </section>
+
+      <section class="case-section reframing-section" aria-labelledby="reframing-title">
+        <div class="editorial-split-heading">
+          <p class="section-kicker">Strategic reframing</p>
+          <h2 id="reframing-title">From a standalone feature to a contextual attachment system.</h2>
+          <div class="editorial-split-copy">
+            <p class="lead">
+              The team shifted the question from “How do we expose more offers?” to “When does redemption
+              support the decision already being made?”
+            </p>
+            <p>
+              That reframing turned redemption from a destination into a contextual attachment strategy—one
+              that could respond to intent without adding friction to checkout.
+            </p>
+          </div>
+        </div>
+
+        <div class="supporting-evidence-grid">
+          <figure class="evidence-figure evidence-figure--supporting">
+            <div class="evidence-card-heading">
+              <p>Supporting evidence · Early concept</p>
+              <h3>Mapping eligibility before interface structure.</h3>
+            </div>
+            <div class="evidence-media">
+              <img
+                src="../../assets/projects/parknshop-redemption/early-concept.png"
+                alt="Original early concept sketches exploring redemption placement and eligibility"
+                width="688"
+                height="649"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              Sketches mapped product, eligibility and redemption detail before committing to interface structure.
+            </figcaption>
+          </figure>
+
+          <figure class="evidence-figure evidence-figure--secondary">
+            <div class="evidence-card-heading">
+              <p>Validation evidence · Team alignment</p>
+              <h3>Turning the structural proposal into a shared decision.</h3>
+            </div>
+            <div class="evidence-media">
+              <img
+                src="../../assets/projects/parknshop-redemption/prototype-presentation.png"
+                alt="Original prototype presentation used to align stakeholders on the redesigned redemption experience"
+                width="1417"
+                height="614"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <figcaption>
+              The prototype made the structural proposal discussable across product, business and engineering.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="case-section principles-section" aria-labelledby="principles-title">
+        <div class="section-heading compact-heading">
+          <p class="section-kicker">Design principles</p>
+          <h2 id="principles-title">Three principles shaped the solution.</h2>
+        </div>
+        <ol class="principle-list">
+          <li>
+            <span>01</span>
+            <h3>Align redemption with purchase intent</h3>
+            <p>Bring the opportunity into moments where the shopper is already deciding.</p>
+          </li>
+          <li>
+            <span>02</span>
+            <h3>Protect checkout completion</h3>
+            <p>Keep attachment from becoming a new reason to abandon.</p>
+          </li>
+          <li>
+            <span>03</span>
+            <h3>Reduce task competition</h3>
+            <p>Separate redemption when it conflicts with primary browsing.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="case-section redemption-architecture-section" aria-labelledby="redemption-architecture-title">
+        <div class="editorial-split-heading">
+          <p class="section-kicker">Redemption architecture</p>
+          <h2 id="redemption-architecture-title">A unified redemption system across PDP, Promotion PLP and Cart.</h2>
+          <p>
+            Rather than exposing every redemption in the same way, the system adapts to different purchase
+            conditions and decision moments.
+          </p>
+        </div>
+
+        <figure class="architecture-figure">
+          <div class="architecture-canvas architecture-canvas--desktop">
+            <div class="architecture-image-crop">
+              <img
+                src="../../assets/projects/parknshop-redemption/redemption-architecture.png"
+                alt="Redemption architecture showing a condition-free path from PDP to Cart and a conditional path from PDP through Promotion PLP to Cart"
+                width="2880"
+                height="1600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <div class="architecture-mobile-flow" aria-label="Responsive redemption architecture flow">
+            <div class="architecture-mobile-stage architecture-mobile-stage--origin">
+              <span>01</span>
+              <strong>PDP</strong>
+              <small>Discover a redemption offer</small>
+            </div>
+
+            <div class="architecture-mobile-branches">
+              <article>
+                <header><span>A</span><strong>No condition</strong></header>
+                <p>Directly add the redemption item.</p>
+                <ol>
+                  <li><strong>Cart</strong><small>View and redeem</small></li>
+                </ol>
+              </article>
+
+              <article>
+                <header><span>B</span><strong>With condition</strong></header>
+                <p>Choose an eligible main product first.</p>
+                <ol>
+                  <li><strong>Promotion PLP</strong><small>Choose an eligible main product</small></li>
+                  <li><strong>Cart</strong><small>View and redeem</small></li>
+                </ol>
+              </article>
+            </div>
+          </div>
+
+          <figcaption>
+            Eligibility determines whether redemption can attach immediately or needs a focused product-selection path.
+          </figcaption>
+        </figure>
+      </section>
+
+      <div class="decision-handoff decision-handoff--chapter-only" data-decision-handoff>
+        <div class="decision-handoff-sticky">
+          <section class="decision-transition" aria-labelledby="decisions-title">
+            <div class="section-heading decision-transition-heading">
+              <p class="section-kicker">Key design decisions</p>
+              <h2 id="decisions-title">Three decisions brought the system into the shopping journey.</h2>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <section class="case-section decisions-section" aria-labelledby="decisions-title">
+
+        <article class="decision-chapter" aria-labelledby="pdp-title">
+          <header class="decision-header">
+            <p class="chapter-number">01</p>
+            <div>
+              <p class="section-kicker">Product detail page</p>
+              <h3 id="pdp-title">Turn passive offer copy into an immediate add-on.</h3>
+            </div>
+          </header>
+          <dl class="decision-rationale">
+            <div>
+              <dt>Problem</dt>
+              <dd>Redemption was hidden under “Other offers” and required users to remember conditions.</dd>
+            </div>
+            <div>
+              <dt>Design decision</dt>
+              <dd>Convert condition-free redemption into a product tile with direct add-to-cart.</dd>
+            </div>
+            <div>
+              <dt>Why it works</dt>
+              <dd>The add-on appears during a high-intent product decision, with no extra journey to recall.</dd>
+            </div>
+          </dl>
+          <figure class="product-figure product-figure--media-composite">
+            <div
+              class="product-media-scroll"
+              tabindex="0"
+              aria-label="Scrollable PDP product interaction sequence"
+            >
+              <div class="product-media-composite">
+                <div
+                  class="product-video-slot"
+                  role="img"
+                  aria-label="PDP product interaction showing a condition-free redemption offer"
+                >
+                  <div class="product-video-fallback" aria-hidden="true"></div>
+                  <video
+                    aria-hidden="true"
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    preload="metadata"
+                  >
+                    <source
+                      src="../../assets/projects/parknshop-redemption/pdp-interaction.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+                <img
+                  class="product-media-artwork"
+                  src="../../assets/projects/parknshop-redemption/pdp-flow.png"
+                  alt="PARKnSHOP PDP flow showing redemption discovery, selection and direct add-to-cart"
+                  width="2880"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <figcaption>PDP — a condition-free offer becomes a direct product action.</figcaption>
+          </figure>
+        </article>
+
+        <article class="decision-chapter" aria-labelledby="plp-title">
+          <header class="decision-header">
+            <p class="chapter-number">02</p>
+            <div>
+              <p class="section-kicker">Product listing page</p>
+              <h3 id="plp-title">Turn eligibility into a focused product-selection path.</h3>
+            </div>
+          </header>
+          <dl class="decision-rationale">
+            <div>
+              <dt>Problem</dt>
+              <dd>Conditional redemptions made it difficult to understand which main products fulfilled the offer.</dd>
+            </div>
+            <div>
+              <dt>Design decision</dt>
+              <dd>Route users to a dedicated Promotion PLP showing only eligible main products, then surface redeemable items once the condition is met.</dd>
+            </div>
+            <div>
+              <dt>Why it works</dt>
+              <dd>Users resolve eligibility first and redemption second, reducing task competition and making the condition easier to understand.</dd>
+            </div>
+          </dl>
+          <figure class="product-figure product-figure--media-composite">
+            <div
+              class="product-media-scroll"
+              tabindex="0"
+              aria-label="Scrollable PLP product interaction sequence"
+            >
+              <div class="product-media-composite">
+                <img
+                  class="product-media-artwork product-media-artwork--full"
+                  src="../../assets/projects/parknshop-redemption/plp-flow.png"
+                  alt="PARKnSHOP Promotion PLP showing only eligible main products before surfacing redeemable items once the condition is met"
+                  width="2880"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <figcaption>PLP — fulfil the purchase condition first, then choose the redemption item.</figcaption>
+          </figure>
+        </article>
+
+        <article class="decision-chapter" aria-labelledby="cart-title">
+          <header class="decision-header">
+            <p class="chapter-number">03</p>
+            <div>
+              <p class="section-kicker">Cart</p>
+              <h3 id="cart-title">Add a final reminder without compromising completion.</h3>
+            </div>
+          </header>
+          <dl class="decision-rationale">
+            <div>
+              <dt>Problem</dt>
+              <dd>Customers could forget a redemption opportunity before completing the purchase.</dd>
+            </div>
+            <div>
+              <dt>Design decision</dt>
+              <dd>Add a cart-level section limited to low-friction, no-browse-required offers.</dd>
+            </div>
+            <div>
+              <dt>Why it works</dt>
+              <dd>The reminder can lift attachment and basket value without interrupting checkout.</dd>
+            </div>
+          </dl>
+          <figure class="product-figure product-figure--media-composite">
+            <div
+              class="product-media-scroll"
+              tabindex="0"
+              aria-label="Scrollable Cart product interaction sequence"
+            >
+              <div class="product-media-composite">
+                <img
+                  class="product-media-artwork product-media-artwork--full"
+                  src="../../assets/projects/parknshop-redemption/cart-flow.png"
+                  alt="PARKnSHOP cart flow showing a final-step redemption attachment opportunity"
+                  width="2880"
+                  height="1600"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+            </div>
+            <figcaption>Cart — a controlled final-step opportunity for low-friction attachment.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section class="case-section tradeoff-section" aria-labelledby="tradeoff-title">
+        <div class="section-heading tradeoff-heading">
+          <p class="section-kicker">Key trade-off</p>
+          <h2 id="tradeoff-title">Aligning business ambition, engineering constraints and user evidence.</h2>
+          <p class="tradeoff-intro">
+            Restructuring redemption required the team to reconcile three different definitions of the problem.
+          </p>
+        </div>
+
+        <div class="stakeholder-grid" aria-label="Cross-team perspectives">
+          <article>
+            <p class="stakeholder-index">01</p>
+            <h3>Business</h3>
+            <p>“If redemption underperforms, maximize visibility—show all available offers everywhere.”</p>
+          </article>
+          <article>
+            <p class="stakeholder-index">02</p>
+            <h3>Engineering</h3>
+            <p>Structural changes such as eligibility-based conditional rendering raised refactor and delivery-scope concerns.</p>
+          </article>
+          <article>
+            <p class="stakeholder-index">03</p>
+            <h3>Data &amp; UX</h3>
+            <p>Funnel evidence pointed to cognitive load and poor timing—not lack of exposure—as sources of friction and inaction.</p>
+          </article>
+        </div>
+
+        <section class="tradeoff-resolution" aria-labelledby="resolution-title">
+          <div class="resolution-heading">
+            <p class="section-kicker">How we resolved it</p>
+            <h3 id="resolution-title">Shift the conversation from more visibility to smarter visibility at the right moment.</h3>
+          </div>
+          <div class="resolution-grid">
+            <article>
+              <p class="resolution-audience">For Business</p>
+              <p>
+                We used the available funnel evidence and observed interaction friction to challenge blanket
+                exposure as the default response to underperformance. The opportunity was reframed from maximum
+                exposure to smarter placement: less noise, better timing and stronger promotion relevance.
+              </p>
+            </article>
+            <article>
+              <p class="resolution-audience">For Engineering</p>
+              <p>
+                We proposed a phased rollout beginning with PDP so the structural change could be introduced
+                within a contained delivery scope. Cleaner eligibility logic reduced future technical debt and
+                made later promotion iterations easier.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="tradeoff-outcome" aria-labelledby="tradeoff-outcome-title">
+          <div class="outcome-heading">
+            <p class="section-kicker">Outcome of the trade-off</p>
+            <h3 id="tradeoff-outcome-title">We traded short-term implementation effort for a cleaner promotion system that could scale.</h3>
+          </div>
+          <div class="outcome-grid">
+            <div class="accepted-column">
+              <h4>What we accepted</h4>
+              <ol>
+                <li>Higher upfront engineering effort and refactor scope.</li>
+                <li>A short-term bandwidth trade-off for the phased rollout.</li>
+              </ol>
+            </div>
+            <div class="unlocked-column">
+              <h4>What we unlocked</h4>
+              <dl class="outcome-metrics">
+                <div>
+                  <dt>Cleaner eligibility logic</dt>
+                  <dd>Clearer rules for when and where offers should surface.</dd>
+                </div>
+                <div>
+                  <dt>Scalable promotion structure</dt>
+                  <dd>A shared logic across PDP, Promotion PLP and Cart.</dd>
+                </div>
+              </dl>
+              <p>A phased rollout contained the initial delivery scope and reduced the cost of future iterations.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="case-section conclusion-section" aria-labelledby="conclusion-title">
+        <div class="editorial-summary editorial-summary--final">
+          <div class="editorial-summary__inner">
+            <span class="editorial-summary__rule" aria-hidden="true"></span>
+            <p class="editorial-summary__eyebrow">Impact &amp; reflection</p>
+            <h2 id="conclusion-title" class="editorial-summary__statement">
+              Better placement turned existing demand into
+              <span class="editorial-summary__accent">measurable attachment.</span>
+            </h2>
+            <div class="editorial-summary__support">
+              <p>
+                The project outcomes supported the view that placement and timing contributed to redemption
+                underperformance. Redefining its role for contextual attachment delivered
+                <strong>+36% promotion sales</strong> and <strong>23.8% redemption ATC CVR</strong>.
+              </p>
+              <p>
+                The result reinforced the strategy: alignment across timing, placement and user intent can
+                create sustainable conversion without adding pressure to the checkout journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <nav class="next-project" aria-label="Project navigation">
+        <p class="section-kicker">Next project</p>
+        <a href="../../index.html#featured-projects">
+          <span>
+            <strong>FORTRESS</strong>
+            <small>Electronics / Retail Experience</small>
+          </span>
+          <i aria-hidden="true">&#8594;</i>
+        </a>
+      </nav>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html class="is-intro" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#120f0d" />
+    <link rel="icon" href="data:," />
+    <meta
+      name="description"
+      content="An interactive portfolio hero set in a cinematic Hong Kong streetscape."
+    />
+    <title>Charles Chau — Interactive Portfolio Hero</title>
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/site-header.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero" id="hero">
+      <div class="scene" id="featured-projects" aria-label="Interactive project scene">
+        <div class="scene-camera" id="sceneCamera">
+          <div class="scene-world" id="sceneWorld">
+            <!-- Layer 2: supplied clean background plate. -->
+            <div class="scene-layer scene-layer--background" data-layer="background" data-depth="0.25">
+              <div class="scene-layer__content">
+                <picture class="scene-layer__visual" aria-hidden="true">
+                  <img src="assets/scene/background/hero-clean.png" alt="" width="1453" height="1083" fetchpriority="high" />
+                </picture>
+
+                <div class="distant-light-breath" aria-hidden="true"></div>
+                <div
+                  class="street-reflection scene-effect"
+                  data-x="0.255"
+                  data-y="0.56"
+                  data-w="0.39"
+                  data-h="0.44"
+                  aria-hidden="true"
+                ></div>
+
+              </div>
+            </div>
+
+            <!-- Layer 1: temporary masked sky/skyline extracted from the composite. -->
+            <div class="scene-layer scene-layer--sky" data-layer="sky" data-depth="0.12">
+              <div class="scene-layer__content">
+                <picture class="scene-layer__visual" aria-hidden="true">
+                  <img src="assets/scene/background/hero-clean.png" alt="" width="1453" height="1083" />
+                </picture>
+              </div>
+            </div>
+
+            <!-- Layer 2b: temporary isolated vintage billboard mask. -->
+            <div class="scene-layer scene-layer--billboard" data-layer="billboard" data-depth="0.28">
+              <div class="scene-layer__content">
+                <picture class="scene-layer__visual" aria-hidden="true">
+                  <img src="assets/scene/background/hero-clean.png" alt="" width="1453" height="1083" />
+                </picture>
+                <div
+                  class="intro-billboard-light scene-effect"
+                  data-x="0.188"
+                  data-y="0.365"
+                  data-w="0.102"
+                  data-h="0.246"
+                  aria-hidden="true"
+                ></div>
+
+              </div>
+            </div>
+
+            <!-- Layer 3: temporary feathered tram mask. -->
+            <div class="scene-layer scene-layer--tram" data-layer="tram" data-depth="0.42">
+              <div class="scene-layer__content">
+                <picture class="scene-layer__visual" aria-hidden="true">
+                  <img src="assets/scene/background/hero-clean.png" alt="" width="1453" height="1083" />
+                </picture>
+                <div
+                  class="tram-headlight tram-headlight--left scene-effect"
+                  data-x="0.337"
+                  data-y="0.584"
+                  data-w="0.019"
+                  data-h="0.025"
+                  aria-hidden="true"
+                ></div>
+                <div
+                  class="tram-headlight tram-headlight--right scene-effect"
+                  data-x="0.393"
+                  data-y="0.584"
+                  data-w="0.019"
+                  data-h="0.025"
+                  aria-hidden="true"
+                ></div>
+                <div
+                  class="neon-character-lighting scene-effect"
+                  data-neon-flicker="primary"
+                  data-x="0.435"
+                  data-y="0.116"
+                  data-w="0.092"
+                  data-h="0.082"
+                  aria-hidden="true"
+                >
+                  <span class="neon-character-dim"></span>
+                  <span class="neon-character-glow"></span>
+                </div>
+                <div
+                  class="neon-glow neon-glow--tea scene-effect"
+                  data-x="0.55"
+                  data-y="0.076"
+                  data-w="0.065"
+                  data-h="0.218"
+                  aria-hidden="true"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Layer 4: temporary feathered grocery shop mask. -->
+            <div class="scene-layer scene-layer--shop" data-layer="shop" data-depth="0.5">
+              <div class="scene-layer__content">
+                <picture class="scene-layer__visual" aria-hidden="true">
+                  <img src="assets/scene/background/hero-clean.png" alt="" width="1453" height="1083" />
+                </picture>
+                <div class="shop-light-breath" aria-hidden="true"></div>
+                <div class="intro-warm-lights" aria-hidden="true"></div>
+                <div
+                  class="neon-glow neon-glow--vertical scene-effect"
+                  data-neon-flicker="secondary"
+                  data-x="0.49"
+                  data-y="0.322"
+                  data-w="0.02"
+                  data-h="0.135"
+                  aria-hidden="true"
+                ></div>
+
+              </div>
+            </div>
+
+            <!-- Layer 5: temporary radio/railing mask. -->
+            <div class="scene-layer scene-layer--foreground" data-layer="foreground" data-depth="1">
+              <div class="scene-layer__content">
+                <picture class="scene-layer__visual" aria-hidden="true">
+                  <img src="assets/scene/background/hero-clean.png" alt="" width="1453" height="1083" />
+                </picture>
+              </div>
+            </div>
+
+            <div class="interaction-layer" aria-label="Project hotspots">
+              <button
+                class="project-hotspot project-hotspot--billboard"
+                type="button"
+                data-project="aimas"
+                data-depth="0.28"
+                data-x="0.185"
+                data-y="0.36"
+                data-w="0.115"
+                data-h="0.265"
+                aria-label="Open AIMAS project"
+                aria-pressed="false"
+              >
+                <span class="object-halo"></span>
+                <span class="hotspot-pin">
+                  <i></i>
+                  <span><strong>AIMAS</strong><small>Campaign Orchestration Platform</small></span>
+                </span>
+              </button>
+
+              <button
+                class="project-hotspot project-hotspot--grocery"
+                type="button"
+                data-project="parknshop"
+                data-depth="0.5"
+                data-x="0.525"
+                data-y="0.325"
+                data-w="0.335"
+                data-h="0.315"
+                aria-label="Open PARKnSHOP project"
+                aria-pressed="false"
+              >
+                <span class="object-halo"></span>
+                <span class="hotspot-pin">
+                  <i></i>
+                  <span><strong>PARKnSHOP</strong><small>E-commerce / Supermarket UX</small></span>
+                </span>
+              </button>
+
+              <button
+                class="project-hotspot project-hotspot--radio"
+                type="button"
+                data-project="fortress"
+                data-depth="1"
+                data-x="0.635"
+                data-y="0.605"
+                data-w="0.255"
+                data-h="0.245"
+                aria-label="Open FORTRESS project"
+                aria-pressed="false"
+              >
+                <span class="object-halo"></span>
+                <span class="hotspot-pin">
+                  <i></i>
+                  <span><strong>FORTRESS</strong><small>Electronics / Retail Experience</small></span>
+                </span>
+              </button>
+            </div>
+            <div class="scene-dim" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="color-grade"></div>
+        <div class="film-grain"></div>
+      </div>
+
+      <site-header></site-header>
+
+      <section class="hero-copy" aria-labelledby="hero-title">
+        <p class="hero-location">Based in Hong Kong</p>
+        <h1 id="hero-title">Charles Chau</h1>
+        <p class="hero-role">Product Designer</p>
+      </section>
+
+      <p class="city-note" aria-hidden="true">
+        Design is cultivation,<br />understanding and expressing<br />the essence of things.
+      </p>
+
+      <p class="explore-cue">
+        <span>Click the city to explore my work</span>
+        <i></i>
+      </p>
+
+      <div class="mobile-intro">
+        <p>Based in Hong Kong</p>
+        <h2>Charles Chau</h2>
+        <span>Product Designer</span>
+      </div>
+
+      <nav class="mobile-projects" aria-label="Featured projects">
+        <button type="button" data-project="parknshop" aria-pressed="false">
+          <span>01</span>PARKnSHOP
+        </button>
+        <button type="button" data-project="fortress" aria-pressed="false">
+          <span>02</span>FORTRESS
+        </button>
+        <button type="button" data-project="aimas" aria-pressed="false">
+          <span>03</span>AIMAS
+        </button>
+      </nav>
+
+      <aside class="project-panel" id="projectPanel" aria-hidden="true" aria-live="polite">
+        <div class="panel-topline">
+          <span>Featured project</span>
+          <button class="panel-close" id="panelClose" type="button" aria-label="Close project details">
+            <i></i><i></i>
+          </button>
+        </div>
+        <div class="panel-media">
+          <img id="panelImage" alt="" width="640" height="440" loading="lazy" decoding="async" />
+        </div>
+        <p class="panel-eyebrow" id="panelEyebrow"></p>
+        <h2 id="panelTitle"></h2>
+        <p class="panel-summary" id="panelSummary"></p>
+        <p class="panel-detail" id="panelDetail"></p>
+        <div class="panel-tags" id="panelTags"></div>
+        <a class="panel-footer" id="panelCaseStudyLink" aria-disabled="true">
+          <span id="panelActionLabel">Project preview</span>
+          <span aria-hidden="true">&#8594;</span>
+        </a>
+      </aside>
+
+      <div class="mobile-scrim" id="mobileScrim"></div>
+      <p class="sr-only" id="status" aria-live="polite"></p>
+      <div class="intro-blackout" aria-hidden="true"></div>
+    </main>
+
+    <script src="site-header.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

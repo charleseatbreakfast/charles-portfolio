@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">FORTRESS project image placeholder</title>
+  <desc id="desc">Deep brown placeholder for a future electronics retail case study image.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#171411"/>
+      <stop offset="1" stop-color="#5d3526"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#ef9e51" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ef9e51" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="640" height="440" fill="url(#bg)"/>
+  <circle cx="500" cy="292" r="210" fill="url(#glow)"/>
+  <rect x="72" y="224" width="496" height="118" rx="5" fill="none" stroke="#fff2df" stroke-opacity=".2"/>
+  <circle cx="150" cy="283" r="38" fill="none" stroke="#fff2df" stroke-opacity=".35"/>
+  <path d="M226 257h270M226 277h226M226 297h252" stroke="#fff2df" stroke-opacity=".22"/>
+  <text x="72" y="104" fill="#f8eee2" font-family="Georgia,serif" font-size="54">FORTRESS</text>
+  <text x="75" y="145" fill="#e7a25c" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">PROJECT IMAGE SLOT</text>
+  <text x="75" y="390" fill="#f8eee2" fill-opacity=".58" font-family="Arial,sans-serif" font-size="12">Replace with final electronics / retail experience case study artwork</text>
+</svg>

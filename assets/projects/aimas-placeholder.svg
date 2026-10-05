@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" role="img" aria-labelledby="title desc">
+  <title id="title">AIMAS campaign orchestration platform image placeholder</title>
+  <desc id="desc">Dark teal placeholder for the AIMAS campaign orchestration product case study.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#161311"/>
+      <stop offset="1" stop-color="#70412f"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="440" fill="url(#bg)"/>
+  <path d="M0 360L640 94V440H0Z" fill="#d4663e" opacity=".09"/>
+  <path d="M78 320l86-66 88 24 92-104 88 48 124-112" fill="none" stroke="#f3b173" stroke-width="3" stroke-opacity=".58"/>
+  <g fill="#f3b173">
+    <circle cx="78" cy="320" r="5"/><circle cx="164" cy="254" r="5"/><circle cx="252" cy="278" r="5"/>
+    <circle cx="344" cy="174" r="5"/><circle cx="432" cy="222" r="5"/><circle cx="556" cy="110" r="5"/>
+  </g>
+  <text x="72" y="94" fill="#f8eee2" font-family="Georgia,serif" font-size="48">AIMAS</text>
+  <text x="75" y="135" fill="#f0a564" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">PROJECT IMAGE SLOT</text>
+  <text x="75" y="390" fill="#f8eee2" fill-opacity=".58" font-family="Arial,sans-serif" font-size="12">Replace with final campaign orchestration product artwork</text>
+</svg>
