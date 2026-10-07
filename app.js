@@ -47,8 +47,8 @@ const projects = {
     detail:
       "Using UI, interaction and motion to connect product behaviour, system feedback and digital brand expression.",
     image: {
-      src: "assets/projects/fortress/fortress-hero.png",
-      alt: "FORTRESS mobile app experience shown across product screens",
+      src: "assets/projects/fortress/thumbnail.png",
+      alt: "FORTRESS mobile app presented on an angled phone display",
     },
     caseStudyHref: "work/fortress-app/index.html",
     tags: ["Interaction design", "Motion design", "Mobile product"],

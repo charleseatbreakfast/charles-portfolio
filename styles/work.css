@@ -162,11 +162,11 @@ body {
 .work-panel__content {
   position: absolute;
   z-index: 2;
+  top: 58%;
   right: clamp(18px, 1.8vw, 28px);
-  bottom: clamp(22px, 3.4vh, 38px);
   left: clamp(18px, 1.8vw, 28px);
   display: grid;
-  align-content: end;
+  align-content: start;
 }
 
 .work-panel__index,
@@ -179,9 +179,7 @@ body {
 }
 
 .work-panel__index {
-  position: absolute;
-  bottom: calc(100% + clamp(22px, 3vh, 34px));
-  left: 0;
+  margin: 0 0 clamp(18px, 2.4vh, 28px);
   color: var(--panel-accent);
   font-size: var(--type-eyebrow);
   font-weight: 600;
@@ -386,7 +384,7 @@ body {
   .work-panels:has(.work-panel:is(:hover, :focus-within)) .work-panel,
   .work-panels:has(.work-panel:is(:hover, :focus-within)) .work-panel:is(:hover, :focus-within) {
     width: 100%;
-    min-height: 460px;
+    min-height: 520px;
     border-right: 1px solid rgba(255, 244, 230, 0.16);
     border-bottom: 1px solid rgba(255, 244, 230, 0.16);
     opacity: 1;
@@ -405,13 +403,13 @@ body {
   }
 
   .work-panel__content {
+    top: 260px;
     right: 22px;
-    bottom: 26px;
     left: 22px;
   }
 
   .work-panel__index {
-    bottom: calc(100% + 20px);
+    margin-bottom: 20px;
   }
 
   .work-panel h2,
@@ -457,7 +455,7 @@ body {
   .work-panel,
   .work-panels:has(.work-panel:is(:hover, :focus-within)) .work-panel,
   .work-panels:has(.work-panel:is(:hover, :focus-within)) .work-panel:is(:hover, :focus-within) {
-    min-height: 430px;
+    min-height: 520px;
   }
 
   .work-panel__media,
@@ -466,7 +464,7 @@ body {
   }
 
   .work-panel--evaluation {
-    min-height: 470px;
+    min-height: 580px;
   }
 }
 
