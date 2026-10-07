@@ -141,6 +141,10 @@
   height: 46%;
 }
 
+.media-placeholder--motion-loading .fortress-motion-preview__stage {
+  background: #fff;
+}
+
 .media-placeholder--motion-preview .media-placeholder__fallback {
   z-index: 3;
   grid-area: 1 / 1;
@@ -286,13 +290,20 @@
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(240px, 0.55fr);
   gap: var(--case-section-content-gap);
-  align-items: end;
+  align-items: stretch;
   margin: var(--case-section-inner-gap) 0 0;
 }
 
 .fortress-icon-proof figure {
-  display: grid;
-  align-content: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.fortress-icon-proof .media-placeholder,
+.fortress-craft-stages .media-placeholder {
+  flex: none;
+  height: clamp(320px, 31vw, 620px);
+  aspect-ratio: auto;
 }
 
 .fortress-craft-stages figcaption {
@@ -427,11 +438,13 @@
   display: grid;
   grid-template-columns: minmax(240px, 0.65fr) minmax(0, 1.35fr);
   gap: var(--case-section-content-gap);
-  align-items: end;
+  align-items: stretch;
   margin-top: var(--case-section-inner-gap);
 }
 
 .fortress-craft-stages figure {
+  display: flex;
+  flex-direction: column;
   margin: 0;
 }
 
@@ -532,6 +545,12 @@
   .fortress-outcome-lines div {
     padding-right: 0;
     padding-left: 0;
+  }
+
+  .fortress-icon-proof .media-placeholder,
+  .fortress-craft-stages .media-placeholder {
+    height: auto;
+    aspect-ratio: var(--media-aspect-ratio);
   }
 }
 
