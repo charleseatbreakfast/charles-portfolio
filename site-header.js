@@ -6,10 +6,9 @@ class CharlesSiteHeader extends HTMLElement {
     const rootPath = this.getAttribute("root") ?? ".";
     const fromRoot = (path) => `${rootPath}/${path}`;
     const navigation = [
-      { id: "work", label: "Work", href: fromRoot("index.html#featured-projects") },
+      { id: "work", label: "Work", href: fromRoot("work.html") },
       { id: "about", label: "About", href: fromRoot("about.html") },
-      { id: "journal", label: "Journal", href: fromRoot("index.html#journal") },
-      { id: "contact", label: "Contact", href: fromRoot("index.html#contact") },
+      { id: "contact", label: "Contact", href: fromRoot("contact.html") },
     ];
 
     const links = navigation

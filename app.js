@@ -47,8 +47,8 @@ const projects = {
     detail:
       "Using UI, interaction and motion to connect product behaviour, system feedback and digital brand expression.",
     image: {
-      src: "assets/projects/fortress-placeholder.svg",
-      alt: "FORTRESS project image placeholder",
+      src: "assets/projects/fortress/fortress-hero.png",
+      alt: "FORTRESS mobile app experience shown across product screens",
     },
     caseStudyHref: "work/fortress-app/index.html",
     tags: ["Interaction design", "Motion design", "Mobile product"],
@@ -62,8 +62,8 @@ const projects = {
     detail:
       "A platform concept connecting campaign structure, visual journey building and performance visibility in one coherent product experience.",
     image: {
-      src: "assets/projects/aimas-placeholder.svg",
-      alt: "AIMAS campaign orchestration platform image placeholder",
+      src: "assets/projects/aimas/hero.png",
+      alt: "AIMAS campaign orchestration dashboard presented on a desktop display",
     },
     caseStudyHref: "work/aimas/index.html",
     tags: ["0→1 product", "Information architecture", "Data product"],

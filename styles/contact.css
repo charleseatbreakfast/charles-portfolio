@@ -1,0 +1,377 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--color-bg);
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: clip;
+  color: var(--color-text);
+  background: var(--color-bg);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+.contact-page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.contact-backdrop,
+.contact-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.contact-backdrop {
+  z-index: -2;
+  background:
+    linear-gradient(90deg, rgba(10, 7, 6, 0.96) 0%, rgba(15, 11, 9, 0.87) 52%, rgba(17, 12, 9, 0.78) 100%),
+    linear-gradient(180deg, rgba(10, 8, 7, 0.46) 0%, rgba(18, 15, 13, 0.78) 100%),
+    url("../assets/scene/background/hero-clean.png") 72% 48% / cover no-repeat;
+  filter: saturate(0.72) brightness(0.72);
+  transform: scale(1.01);
+  animation: contact-backdrop-reveal 1100ms var(--ease-cinematic) both;
+}
+
+.contact-grain {
+  z-index: -1;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+.contact-content {
+  --contact-row-gap: clamp(48px, 4.5vw, 64px);
+
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.42fr) minmax(0, 1.58fr);
+  gap: clamp(80px, 9vw, 152px);
+  align-items: start;
+  align-content: center;
+  width: auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  margin: 0 var(--page-gutter);
+  padding: clamp(108px, 13vh, 140px) 0 clamp(48px, 7vh, 80px);
+}
+
+.contact-intro {
+  align-self: start;
+  padding-top: 0;
+  animation: contact-content-rise 720ms var(--ease-cinematic) 320ms both;
+}
+
+.contact-eyebrow {
+  margin: 0 0 var(--space-5);
+  color: var(--color-text-muted);
+  font-size: var(--type-eyebrow);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.contact-intro h1 {
+  max-width: 22rem;
+  margin: 0;
+  color: rgba(245, 239, 230, 0.72);
+  font-family: var(--font-ui);
+  font-size: var(--type-body-lg);
+  font-weight: 400;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.contact-links {
+  align-self: start;
+  margin: 0;
+  padding: 0 0 0 clamp(12px, 1.8vw, 28px);
+  list-style: none;
+}
+
+.contact-links li {
+  position: relative;
+}
+
+.contact-links li + li {
+  margin-top: var(--contact-row-gap);
+}
+
+.contact-links li + li::before {
+  position: absolute;
+  top: calc(var(--contact-row-gap) / -2);
+  right: 0;
+  left: 0;
+  height: 1px;
+  content: "";
+  background: rgba(255, 244, 230, 0.07);
+}
+
+.contact-links a {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0;
+  color: rgba(245, 239, 230, 0.4);
+  font-family: var(--font-display);
+  font-size: clamp(62px, 8.25vw, 134px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  text-decoration: none;
+  transition:
+    color 220ms ease-out,
+    transform 220ms ease-out;
+}
+
+.contact-links li {
+  animation: contact-content-rise 720ms var(--ease-cinematic) both;
+}
+
+.contact-links li:nth-child(1) {
+  animation-delay: 440ms;
+}
+
+.contact-links li:nth-child(2) {
+  animation-delay: 540ms;
+}
+
+.contact-links li:nth-child(3) {
+  animation-delay: 640ms;
+}
+
+.contact-link {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  appearance: none;
+}
+
+.contact-link--email {
+  position: relative;
+  display: grid;
+  width: min(100%, 10.8ch);
+  max-width: 100%;
+  padding: 0;
+  color: rgba(245, 239, 230, 0.4);
+  font-family: var(--font-display);
+  font-size: clamp(62px, 8.25vw, 134px);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+  transition:
+    color 220ms ease-out,
+    transform 220ms ease-out;
+}
+
+.contact-link__label,
+.contact-link__detail {
+  grid-area: 1 / 1;
+  transition:
+    opacity 220ms ease-out,
+    transform 220ms ease-out;
+}
+
+.contact-link__detail {
+  align-self: center;
+  font-family: var(--font-ui);
+  font-size: clamp(22px, 3vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+.contact-link--email:hover,
+.contact-link--email:focus-visible {
+  color: rgba(245, 239, 230, 0.98);
+  transform: translateX(8px);
+}
+
+.contact-link--email:hover .contact-link__label,
+.contact-link--email:focus-visible .contact-link__label,
+.contact-link--email.is-copied .contact-link__label {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.contact-link--email:hover .contact-link__detail,
+.contact-link--email:focus-visible .contact-link__detail,
+.contact-link--email.is-copied .contact-link__detail {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-link--email:focus-visible {
+  outline: 1px solid rgba(245, 239, 230, 0.7);
+  outline-offset: 6px;
+}
+
+.contact-link--email:active {
+  color: var(--color-text);
+  transform: translateX(5px);
+}
+
+.contact-copy-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes contact-backdrop-reveal {
+  from { opacity: 0; filter: saturate(0.72) brightness(0.45); }
+  to { opacity: 1; filter: saturate(0.72) brightness(0.72); }
+}
+
+@keyframes contact-content-rise {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: rgba(245, 239, 230, 0.98);
+  transform: translateX(8px);
+}
+
+.contact-links a:focus-visible {
+  outline: 1px solid rgba(245, 239, 230, 0.7);
+  outline-offset: 6px;
+}
+
+.contact-links a:active {
+  color: var(--color-text);
+  transform: translateX(5px);
+}
+
+@media (max-width: 900px) {
+  .contact-content {
+    grid-template-columns: minmax(11rem, 0.4fr) minmax(0, 1.6fr);
+    gap: var(--space-8);
+  }
+
+  .contact-links {
+    padding-left: var(--space-4);
+  }
+
+  .contact-links a {
+    font-size: clamp(56px, 9.5vw, 94px);
+  }
+}
+
+@media (max-width: 760px) {
+  .contact-page {
+    overflow: visible;
+  }
+
+  .contact-backdrop {
+    background:
+      linear-gradient(180deg, rgba(10, 7, 6, 0.9) 0%, rgba(15, 11, 9, 0.92) 56%, rgba(18, 15, 13, 0.98) 100%),
+      url("../assets/scene/background/hero-clean.png") 58% center / cover no-repeat;
+  }
+
+  .contact-content {
+    --contact-row-gap: 48px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    width: auto;
+    min-height: 100dvh;
+    margin: 0 18px;
+    padding: 116px 0 48px;
+  }
+
+  .contact-intro {
+    align-self: stretch;
+    padding-top: 0;
+  }
+
+  .contact-intro h1 {
+    max-width: 31rem;
+    font-size: var(--type-body);
+  }
+
+  .contact-links {
+    width: 100%;
+    margin-top: clamp(44px, 10vh, 72px);
+    padding: 0;
+  }
+
+  .contact-links a {
+    width: 100%;
+    padding: 0;
+    color: rgba(245, 239, 230, 0.86);
+    font-size: clamp(48px, 14.5vw, 72px);
+    line-height: 0.98;
+    overflow-wrap: anywhere;
+  }
+
+  .contact-link--email {
+    width: 100%;
+    color: rgba(245, 239, 230, 0.86);
+    font-size: clamp(48px, 14.5vw, 72px);
+    line-height: 0.98;
+  }
+
+  .contact-link__detail {
+    font-size: clamp(20px, 6vw, 30px);
+  }
+
+  .contact-links a:hover,
+  .contact-links a:focus-visible,
+  .contact-link--email:hover,
+  .contact-link--email:focus-visible {
+    transform: none;
+  }
+
+  .contact-links a:active {
+    transform: translateX(4px);
+  }
+
+  .contact-link--email:active {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-backdrop,
+  .contact-intro,
+  .contact-links li {
+    animation: none;
+  }
+
+  .contact-links a,
+  .contact-link--email,
+  .contact-link__label,
+  .contact-link__detail {
+    transition-duration: 0.001ms;
+  }
+}

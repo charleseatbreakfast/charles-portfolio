@@ -72,11 +72,21 @@ Use for:
 ### Suggested scale
 - Header logo: `clamp(150px, 11vw, 190px)` wide, intrinsic aspect ratio, `height: auto`
 - Hero/Page H1: `clamp(52px, 5.15vw, 82px)`, 500, line-height ~0.98–1.04, `-0.05em`
-- Section H2: `clamp(34px, 3.2vw, 56px)`, 400–500, line-height ~1.04
+- Section H2: `clamp(34px, 3.2vw, 56px)`, 400–500, line-height `1.08`
 - Body large: `clamp(16px, 1.15vw, 19px)`, line-height 1.5–1.6
 - Body: `clamp(14px, 0.95vw, 16px)`, line-height 1.5–1.6
 - Eyebrow: `8–11px`, uppercase, tracking `0.20–0.24em`
 - Metadata: `9–12px`, tracking `0.02–0.10em`
+
+### Case-study typography hierarchy
+- **Eyebrow:** use the shared `.section-kicker` pattern only—UI font, `var(--type-eyebrow)`, weight 600, uppercase, `0.22em` tracking, `1.4` line-height and project accent color. Do not enlarge or restyle an eyebrow for an individual section.
+- **Editorial section title:** use `.case-section-title` with the display font, `var(--type-section-h2)`, `var(--case-title-leading)` and `var(--case-title-max)`. The default title line-height is `1.08`: expressive, but never tight enough for adjacent lines to collide.
+- **Supporting description:** use `.case-section-description`. It belongs to and aligns with the title content column, never the eyebrow label. In a split header its top aligns with the title, while the eyebrow spans above both columns.
+- **Index number:** use `.case-index` in small UI-font utility typography. An index is navigation metadata, not a display-serif title or metric.
+- **Numbered content row:** use `.case-numbered-row` with the shared `--case-index-column` and `--case-index-gap`. Keep the number close to and top-aligned with its child title and copy.
+- **Parent versus child hierarchy:** the section eyebrow and editorial title establish the chapter. Child problem titles, decision details and deliverables must remain visibly subordinate in size and weight.
+- **Width:** use the shared title and description maxima before adding a narrower constraint. Do not force arbitrary line breaks when the grid has available width.
+- Do not create section-specific typography values when these shared primitives express the same role. A one-off is acceptable only for a genuinely different content role and must be documented here first.
 
 Personal role/title:
 **Product Designer**
@@ -320,10 +330,13 @@ Reusable structure:
 
 ### Case-study hierarchy patterns
 - Section headings use one sequence: project-accent eyebrow, then display-serif title directly below it.
+- Use `.case-section-heading`, `.case-section-title` and `.case-section-description` for standard case-study headers. On desktop, the eyebrow spans the header and the description aligns to the title row; on narrow screens they collapse into normal reading order.
 - Numbered solution chapters use a small fixed index column beside a grouped eyebrow-and-title block. The index and eyebrow are supporting metadata; the title remains dominant. Reuse the same index width, gap and vertical alignment for every chapter on the page.
+- Introduce a group such as **Core Design Decisions** once at parent level. Individual child decisions use their index, title, description and evidence without repeating the same category eyebrow.
 - When a split section includes explanatory content beside the heading, align that content with the title top rather than the eyebrow.
 - Strategic, editorial and framing sections—including Key Observations, Strategic Reframing and Working Hypothesis—reuse one horizontal split pattern on desktop: the eyebrow spans the component above a left-column statement and a right-column explanation. Do not alternate between stacked and split arrangements for equivalent content. Collapse the same hierarchy into normal reading order on narrow screens.
 - Large strategic statements use a controlled readable max-width within their grid column. Do not create arbitrary narrow containers that force awkward line breaks, or allow a statement to run so wide that its hierarchy becomes unclear.
+- Delivery or scope lists use secondary UI-font headings and small index markers. They support the main editorial outcome title and must not compete with it in display type.
 - Meaningful numerical outcomes use the restrained project accent for emphasis. Apply it to primary metrics, percentages and decision-step indices only; do not color every number in prose or routine metadata.
 - Preserve a substantive **Key trade-off** section whenever the project includes meaningful cross-team negotiation. Show stakeholder perspectives, how the conflict was resolved, what was accepted and what the decision unlocked; do not collapse strategic reasoning into a single summary sentence.
 - Trade-off sections use spacing and hierarchy before rules. Keep only dividers that clarify the outer structure or a true column boundary; do not add horizontal lines between every resolution, cost, benefit or outcome block.

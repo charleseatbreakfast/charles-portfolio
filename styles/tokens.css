@@ -45,6 +45,13 @@
   --type-body: clamp(14px, 0.95vw, 16px);
   --type-eyebrow: clamp(8px, 0.68vw, 11px);
 
+  /* Shared case-study hierarchy */
+  --case-title-leading: 1.08;
+  --case-title-max: 22ch;
+  --case-description-max: 42rem;
+  --case-index-column: 48px;
+  --case-index-gap: var(--space-4);
+
   /* Motion */
   --ease-cinematic: cubic-bezier(0.2, 0.72, 0.18, 1);
   --duration-ui: 220ms;

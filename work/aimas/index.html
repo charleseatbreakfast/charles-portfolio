@@ -24,7 +24,10 @@
           <p class="section-kicker">AIMAS · Campaign orchestration platform</p>
           <h1 id="aimas-title">From fragmented campaign tools to one connected workspace.</h1>
           <p class="hero-intro">
-            A 0→1 product concept that brought campaign planning, journey building and performance visibility into one coherent workspace.
+            AIMAS is a campaign orchestration platform for marketing teams managing audience setup, multi-step journeys and campaign performance.
+          </p>
+          <p class="aimas-hero-ownership">
+            I defined the product framework and end-to-end interface from the ground up, covering information architecture, journey-building workflows and the core UI system.
           </p>
 
           <dl class="project-meta" aria-label="Project details">
@@ -38,18 +41,22 @@
             </div>
             <div>
               <dt>Period</dt>
-              <dd aria-label="Project period to be confirmed">—</dd>
+              <dd>8-week product design phase</dd>
             </div>
             <div>
               <dt>Scope</dt>
               <dd>0→1 Product Design · Information Architecture · Workflow &amp; Data UX</dd>
+            </div>
+            <div class="project-meta__status">
+              <dt>Status</dt>
+              <dd>Core product design progressed into development</dd>
             </div>
           </dl>
         </div>
 
         <figure class="hero-visual aimas-hero-visual">
           <div class="media-placeholder aimas-media aimas-media--hero" data-adaptive-ratio>
-            <img alt="" />
+            <img src="../../assets/projects/aimas/hero.png" alt="AIMAS campaign orchestration dashboard presented on a desktop display." />
             <div class="media-placeholder__fallback">
               <span>Development media placeholder</span>
               <strong>AIMAS product overview</strong>
@@ -60,19 +67,17 @@
       </header>
 
       <section class="case-section aimas-challenge" aria-labelledby="challenge-title">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="section-kicker">The challenge</p>
-            <h2 id="challenge-title">Campaign work was fragmented across disconnected workflows.</h2>
-          </div>
-          <p>
-            Planning, execution and performance management lived across separate tools and views, making it difficult to understand a campaign as one connected system.
+        <header class="case-section-heading">
+          <p class="section-kicker">The challenge</p>
+          <h2 id="challenge-title" class="case-section-title">Campaign work was fragmented across disconnected workflows.</h2>
+          <p class="case-section-description">
+            Campaign setup, audience definition, journey logic, execution and performance lived in separate contexts, making it difficult to understand the campaign as one continuous workflow.
           </p>
-        </div>
+        </header>
 
         <figure class="aimas-evidence">
           <div class="media-placeholder aimas-media aimas-media--workflow" data-adaptive-ratio>
-            <img alt="" />
+            <img src="../../assets/projects/aimas/existing-workflow.png" alt="Screens from the fragmented campaign workflow that preceded AIMAS." />
             <div class="media-placeholder__fallback">
               <span>Development media placeholder</span>
               <strong>Existing campaign workflow</strong>
@@ -83,114 +88,147 @@
       </section>
 
       <section class="case-section aimas-learnings" aria-labelledby="learnings-title">
-        <div class="section-heading section-heading--compact">
-          <p class="section-kicker">What we learned</p>
-          <h2 id="learnings-title">Three observations shaped the product structure.</h2>
-          <p>The source research and workflow observation surfaced three recurring product problems.</p>
-        </div>
+        <header class="case-section-heading case-section-heading--stacked">
+          <p class="section-kicker">Existing workflow</p>
+          <h2 id="learnings-title" class="case-section-title">Reviewing the existing workflow revealed three structural problems.</h2>
+        </header>
 
         <ol class="insight-list">
-          <li>
-            <span>01</span>
+          <li class="case-numbered-row">
+            <span class="case-index">01</span>
             <div>
               <h3>Journeys were managed without enough campaign-level context.</h3>
               <p>A flat journey list made it difficult to see how related work belonged together.</p>
+              <small>Design response · Campaign as the container</small>
             </div>
           </li>
-          <li>
-            <span>02</span>
+          <li class="case-numbered-row">
+            <span class="case-index">02</span>
             <div>
               <h3>Complex logic became harder to follow across disconnected steps.</h3>
               <p>Triggers, conditions, actions and waits needed to be understood as one journey.</p>
+              <small>Design response · A visible journey canvas</small>
             </div>
           </li>
-          <li>
-            <span>03</span>
+          <li class="case-numbered-row">
+            <span class="case-index">03</span>
             <div>
               <h3>Performance information needed to stay connected to the campaign being managed.</h3>
               <p>Campaign data was more useful when it remained part of the working context.</p>
+              <small>Design response · Performance in campaign context</small>
             </div>
           </li>
         </ol>
       </section>
 
-      <section class="case-section aimas-architecture" aria-labelledby="architecture-title">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="section-kicker">Product architecture</p>
-            <h2 id="architecture-title">From separate campaign tools to one connected orchestration system.</h2>
-          </div>
-          <p>
-            The product was reframed around Campaign as a shared context, connecting related audience, journey-building and performance work without treating them as isolated tools.
-          </p>
-        </div>
-
-        <div class="platform-map" role="img" aria-label="Campaign provides shared context across Segments, Journey Builder and Performance. Journey Builder connects journeys to a canvas with nodes and channels.">
-          <div class="platform-map__root">
-            <span>Shared context</span>
-            <strong>Campaign</strong>
-          </div>
-          <p class="platform-map__relation-label">Connected product areas</p>
-          <div class="platform-map__branches">
-            <div class="platform-map__branch">
-              <span>Related product area</span>
-              <strong>Segments</strong>
-              <small>Audience definition</small>
-            </div>
-            <div class="platform-map__branch platform-map__branch--orchestration">
-              <span>Journey builder</span>
-              <strong>Journeys</strong>
-              <b>Canvas</b>
-              <small>Nodes · Channels</small>
-            </div>
-            <div class="platform-map__branch">
-              <span>Related product area</span>
-              <strong>Performance</strong>
-              <small>Campaign results</small>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section class="case-section aimas-decision" aria-labelledby="campaign-container-title">
-        <div class="decision-index" aria-hidden="true">01</div>
+        <p class="section-kicker decision-group-label">Core design decisions</p>
         <div class="decision-layout">
           <div class="decision-copy">
-            <p class="section-kicker">Key design decision</p>
-            <h2 id="campaign-container-title">Campaign as the container.</h2>
-            <p>
-              Campaign became the shared product context for organising related journeys, segments, execution status and performance in one place.
-            </p>
+            <header class="decision-heading case-numbered-row">
+              <span class="case-index" aria-hidden="true">01</span>
+              <div>
+                <h2 id="campaign-container-title" class="case-section-title">Campaign as the container.</h2>
+                <p class="case-section-description">
+                  Campaign became the shared product object connecting audience, journeys, execution status and performance—not simply another page in the navigation.
+                </p>
+              </div>
+            </header>
             <div class="decision-note">
-              <span>Product value</span>
-              <p>Related workflows became easier to understand together, while users could still move into journey-level detail without losing campaign context.</p>
+              <span>Information architecture decision</span>
+              <p>A master-detail structure kept the campaign overview and its related journeys on the same screen, so users could compare and manage work without losing the parent context.</p>
             </div>
           </div>
           <div class="media-placeholder aimas-media aimas-media--decision" data-adaptive-ratio>
-            <img alt="" />
+            <img src="../../assets/projects/aimas/campaign-overview.png" alt="AIMAS journey overview connecting related campaigns and shared status information." />
             <div class="media-placeholder__fallback">
               <span>Development media placeholder</span>
-              <strong>Campaign overview + journey management</strong>
+              <strong>Campaign overview · Related journeys · Shared status</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="architecture-shift" role="img" aria-label="Before, journeys, segments, execution and reports were separate areas. After, Campaign became the shared context connecting audience and segments, journeys, execution and status, and performance.">
+          <div class="architecture-shift__state architecture-shift__state--before">
+            <span class="architecture-shift__label">Before · Separate areas</span>
+            <div class="architecture-shift__items">
+              <strong>Journeys</strong>
+              <strong>Segments</strong>
+              <strong>Execution</strong>
+              <strong>Reports</strong>
+            </div>
+          </div>
+          <div class="architecture-shift__arrow" aria-hidden="true">→</div>
+          <div class="architecture-shift__state architecture-shift__state--after">
+            <span class="architecture-shift__label">After · Shared product context</span>
+            <div class="architecture-shift__campaign">
+              <strong>Campaign</strong>
+              <ul>
+                <li>Audience / Segments</li>
+                <li>Journeys</li>
+                <li>Execution / Status</li>
+                <li>Performance</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="case-section aimas-decision aimas-decision--canvas" aria-labelledby="canvas-title">
-        <div class="decision-index" aria-hidden="true">02</div>
-        <div class="decision-copy decision-copy--wide">
-          <p class="section-kicker">Key design decision</p>
-          <h2 id="canvas-title">Build complex journeys as a visible system.</h2>
-          <p>
-            The Canvas translated abstract journey logic into connected nodes that marketers could construct, scan and navigate as one workflow.
+      <section class="case-section aimas-early-exploration" aria-labelledby="early-exploration-title">
+        <header class="case-section-heading">
+          <p class="section-kicker">Early exploration</p>
+          <h2 id="early-exploration-title" class="case-section-title">Shaping the platform from the ground up.</h2>
+          <p class="case-section-description">
+            Early sketches and low-fidelity wireframes helped translate the product model into working campaign flows before the platform structure was formalised.
           </p>
-        </div>
+        </header>
 
-        <div class="media-placeholder aimas-media aimas-media--canvas" data-adaptive-ratio>
-          <img alt="" />
-          <div class="media-placeholder__fallback">
-            <span>Development media placeholder</span>
-            <strong>Visual journey builder / canvas</strong>
+        <figure class="aimas-early-exploration__figure">
+          <img
+            src="../../assets/projects/aimas/early-exploration.png"
+            alt="AIMAS early exploration showing three hand-drawn product-structure sketches progressing into a connected low-fidelity wireframe board."
+          />
+        </figure>
+      </section>
+
+      <section class="case-section aimas-product-workflow" aria-labelledby="product-workflow-title">
+        <header class="case-section-heading">
+          <p class="section-kicker">Product architecture</p>
+          <h2 id="product-workflow-title" class="case-section-title">Connecting the campaign lifecycle into one system.</h2>
+          <p class="case-section-description">
+            AIMAS connected campaign setup, journey building, delivery and performance into one continuous product workflow.
+          </p>
+        </header>
+
+        <figure class="aimas-product-workflow__figure">
+          <img
+            src="../../assets/projects/aimas/product-workflow.png"
+            alt="End-to-end AIMAS workflow connecting login, business overview, journeys, campaigns, templates, delivery, publishing, dashboards and workflow analysis through a refinement loop."
+          />
+          <figcaption>End-to-end AIMAS product workflow.</figcaption>
+        </figure>
+      </section>
+
+      <section class="case-section aimas-decision aimas-decision--canvas" aria-labelledby="canvas-title">
+        <div class="decision-layout">
+          <div class="decision-copy">
+            <header class="decision-heading case-numbered-row">
+              <span class="case-index" aria-hidden="true">02</span>
+              <div>
+                <h2 id="canvas-title" class="case-section-title">Build complex journeys as a visible system.</h2>
+                <p class="case-section-description">
+                  The Canvas translated abstract “if–then” logic into connected nodes that marketers could construct, scan and navigate as one workflow.
+                </p>
+              </div>
+            </header>
+          </div>
+
+          <div class="media-placeholder aimas-media aimas-media--canvas" data-adaptive-ratio>
+            <img src="../../assets/projects/aimas/canvas.png" alt="AIMAS business overview and visual journey canvas shown across two product screens." />
+            <div class="media-placeholder__fallback">
+              <span>Development media placeholder</span>
+              <strong>Visual journey builder / canvas</strong>
+            </div>
           </div>
         </div>
 
@@ -201,84 +239,133 @@
           <div><i aria-hidden="true"></i><span>Wait</span><small>Delays the next step</small></div>
         </div>
 
-        <div class="canvas-supporting-media">
-          <figure>
-            <div class="media-placeholder aimas-media aimas-media--canvas-detail" data-adaptive-ratio>
-              <img alt="" />
-              <div class="media-placeholder__fallback">
-                <span>Development media placeholder</span>
-                <strong>Canvas navigation / mini-map</strong>
-              </div>
+        <div class="canvas-complexity-grid">
+          <article class="canvas-complexity">
+            <div class="canvas-complexity__copy">
+              <p class="section-kicker">Interaction challenge 01</p>
+              <h3>Keep large journeys readable.</h3>
+              <dl>
+                <div><dt>Challenge</dt><dd>A journey could grow towards 50 nodes, making its structure harder to scan.</dd></div>
+                <div><dt>Design decision</dt><dd>Use consistent colour semantics to distinguish triggers, conditions, actions and waits.</dd></div>
+                <div><dt>Why it mattered</dt><dd>Users could recognise the journey structure before reading every node.</dd></div>
+              </dl>
             </div>
-            <figcaption>Navigate and retain context across larger journey structures.</figcaption>
-          </figure>
-          <figure>
-            <div class="media-placeholder aimas-media aimas-media--canvas-detail" data-adaptive-ratio>
-              <img alt="" />
-              <div class="media-placeholder__fallback">
-                <span>Development media placeholder</span>
-                <strong>Node connections / interaction detail</strong>
+            <figure>
+              <div class="media-placeholder aimas-media aimas-media--canvas-detail" data-adaptive-ratio>
+                <img src="../../assets/projects/aimas/interaction-challenge-01.png" alt="AIMAS journey canvas zoomed out to keep a large node structure readable." />
+                <div class="media-placeholder__fallback">
+                  <span>Development media placeholder</span>
+                  <strong>Large journey · Colour-coded node structure</strong>
+                </div>
               </div>
+              <figcaption>Selected journey showing node hierarchy at scale.</figcaption>
+            </figure>
+          </article>
+
+          <article class="canvas-complexity">
+            <div class="canvas-complexity__copy">
+              <p class="section-kicker">Interaction challenge 02</p>
+              <h3>Move between detail and the whole journey.</h3>
+              <dl>
+                <div><dt>Challenge</dt><dd>Long journey paths made it easy to lose orientation while editing individual nodes.</dd></div>
+                <div><dt>Design decision</dt><dd>Add a mini-map and zoom controls for switching between macro navigation and focused editing.</dd></div>
+                <div><dt>Why it mattered</dt><dd>Users could inspect a local branch without losing its position in the wider journey.</dd></div>
+              </dl>
             </div>
-            <figcaption>Make relationships between journey steps visible.</figcaption>
-          </figure>
+            <figure>
+              <div class="media-placeholder aimas-media aimas-media--canvas-detail" data-adaptive-ratio>
+                <img src="../../assets/projects/aimas/interaction-challenge-02.png" alt="AIMAS journey and campaign views showing navigation between detailed and wider workflow context." />
+                <div class="media-placeholder__fallback">
+                  <span>Development media placeholder</span>
+                  <strong>Mini-map · Zoom · Macro / micro navigation</strong>
+                </div>
+              </div>
+              <figcaption>Navigation controls for larger journey structures.</figcaption>
+            </figure>
+          </article>
         </div>
       </section>
 
       <section class="case-section aimas-decision" aria-labelledby="performance-title">
-        <div class="decision-index" aria-hidden="true">03</div>
-        <div class="decision-layout decision-layout--performance">
-          <div class="media-placeholder aimas-media aimas-media--performance" data-adaptive-ratio>
-            <img alt="" />
-            <div class="media-placeholder__fallback">
-              <span>Development media placeholder</span>
-              <strong>Performance dashboard + data interactions</strong>
-            </div>
-          </div>
-          <div class="decision-copy">
-            <p class="section-kicker">Key design decision</p>
+        <article class="canvas-complexity canvas-complexity--performance">
+          <div class="canvas-complexity__copy">
+            <p class="section-kicker">03</p>
             <h2 id="performance-title">Keep performance visible in context.</h2>
-            <p>
-              The reporting experience used hierarchy, filtering and interactive data details to make campaign performance easier to interpret without turning AIMAS into a separate dashboard product.
+            <p class="performance-description">
+              Performance was not treated as a separate reporting destination. It remained attached to the campaign users were already managing, preserving continuity from planning through interpretation.
             </p>
+            <div class="campaign-continuity" aria-label="Campaign lifecycle remains in one context">
+              <span>Plan</span><i aria-hidden="true">→</i><span>Build</span><i aria-hidden="true">→</i><span>Execute</span><i aria-hidden="true">→</i><span>Understand</span>
+            </div>
             <ul class="capability-list">
               <li>Campaign-level hierarchy</li>
               <li>Filtering and status context</li>
               <li>Interactive chart details</li>
             </ul>
           </div>
-        </div>
+          <figure>
+            <div class="media-placeholder aimas-media aimas-media--canvas-detail" data-adaptive-ratio>
+              <img src="../../assets/projects/aimas/performance.png" alt="AIMAS performance dashboard connecting journey, campaign and canvas data." />
+              <div class="media-placeholder__fallback">
+                <span>Development media placeholder</span>
+                <strong>Performance dashboard + data interactions</strong>
+              </div>
+            </div>
+          </figure>
+        </article>
       </section>
 
       <section class="case-section aimas-visual" aria-labelledby="visual-title">
-        <div class="section-heading section-heading--split">
-          <div>
-            <p class="section-kicker">Visual foundation</p>
-            <h2 id="visual-title">A consistent interface language supported a complex platform.</h2>
-          </div>
-          <p>
-            Colour, typography and reusable components created a clear foundation for campaign management, canvas controls and performance views.
+        <header class="case-section-heading">
+          <p class="section-kicker">Product language</p>
+          <h2 id="visual-title" class="case-section-title">Designing a visual language for a complex platform.</h2>
+          <p class="case-section-description">
+            Reusable patterns made product relationships and system states legible across the campaign workspace, journey canvas, configuration panels and performance views.
           </p>
-        </div>
-        <div class="media-placeholder aimas-media aimas-media--visual" data-adaptive-ratio>
-          <img alt="" />
-          <div class="media-placeholder__fallback">
-            <span>Development media placeholder</span>
-            <strong>Colour · Typography · Components · Applied UI</strong>
+        </header>
+        <div class="product-language-grid">
+          <div class="media-placeholder aimas-media aimas-media--visual">
+            <img src="../../assets/projects/aimas/product-language.png" alt="AIMAS product language covering charts, tables, buttons, form inputs and reusable interface components." />
+            <div class="media-placeholder__fallback">
+              <span>Development media placeholder</span>
+              <strong>Journey nodes · Status · Canvas controls · Data UI · Platform components</strong>
+            </div>
+          </div>
+          <div class="media-placeholder aimas-media aimas-media--visual">
+            <img src="../../assets/projects/aimas/product-guideline.png" alt="AIMAS interface guidelines for inputs, forms, checkboxes, radio controls and dropdowns." />
+            <div class="media-placeholder__fallback">
+              <span>Development media placeholder</span>
+              <strong>Product guideline</strong>
+            </div>
           </div>
         </div>
+      </section>
+
+      <section class="case-section aimas-delivery" aria-labelledby="delivery-title">
+        <header class="case-section-heading">
+          <p class="section-kicker">Delivery</p>
+          <h2 id="delivery-title" class="case-section-title">The core product framework moved into development.</h2>
+          <p class="case-section-description">
+            The 0→1 design phase established the campaign model, journey-building framework, core performance views and reusable interface language for implementation.
+          </p>
+        </header>
+        <ul class="delivery-list" aria-label="AIMAS delivery scope">
+          <li><span class="case-index">01</span><strong>Shared campaign product model and information architecture</strong></li>
+          <li><span class="case-index">02</span><strong>Journey Builder interaction framework and canvas navigation</strong></li>
+          <li><span class="case-index">03</span><strong>Core platform UI patterns prepared for development</strong></li>
+        </ul>
       </section>
 
       <section class="case-section aimas-future" aria-labelledby="future-title">
         <div class="future-copy">
-          <p class="section-kicker">Future direction · Concept</p>
-          <h2 id="future-title">Exploring guided AI orchestration.</h2>
-          <p>
+          <p class="section-kicker">Future exploration · Concept</p>
+          <h2 id="future-title" class="case-section-title">Exploring guided AI orchestration.</h2>
+          <p class="case-section-description">
             The early concept evolved from an open conversational prompt toward guided steps paired with live canvas feedback. This remained a conceptual future direction rather than shipped functionality.
           </p>
         </div>
         <div class="media-placeholder aimas-media aimas-media--future aimas-media--future-wide" data-adaptive-ratio>
-          <img alt="" />
+          <img src="../../assets/projects/aimas/ai-orchestration.png" alt="Concept screens exploring guided AI orchestration within the AIMAS journey builder." />
           <div class="media-placeholder__fallback">
             <span>Development media placeholder</span>
             <strong>Early concept → guided refinement → future opportunity</strong>
@@ -297,7 +384,7 @@
             </h2>
             <div class="editorial-summary__support">
               <p>
-                Campaign context, journey logic and performance could then be understood as parts of the same system.
+                Designing AIMAS meant defining the relationships between campaign context, workflow logic and performance—not treating them as separate screens.
               </p>
             </div>
           </div>
@@ -305,18 +392,18 @@
       </section>
 
       <nav class="next-project" aria-label="Project navigation">
-        <a href="../fortress-app/index.html">
+        <a href="../parknshop-redemption/index.html">
           <span>
             <small>Next project</small>
-            <strong>FORTRESS Mobile App</strong>
-            <small>Interaction / Motion / Visual Craft</small>
+            <strong>PARKnSHOP Redemption</strong>
+            <small>Commerce Strategy / Funnel / System Design</small>
           </span>
           <i aria-hidden="true">&#8594;</i>
         </a>
       </nav>
     </main>
 
-    <script src="../../site-header.js" defer></script>
+    <script src="../../site-header.js?v=20261007work" defer></script>
     <script src="../../case-study.js" defer></script>
   </body>
 </html>
