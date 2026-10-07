@@ -24,6 +24,7 @@ coverage/
 .vscode/
 
 # Archives and temporary generated files
+dist/
 *.zip
 *.tar
 *.tar.gz
