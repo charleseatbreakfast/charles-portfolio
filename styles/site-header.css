@@ -110,7 +110,25 @@ site-header {
   text-transform: uppercase;
 }
 
-.header-signoff > i {
+.header-signoff__message {
+  transition:
+    color 480ms var(--ease-cinematic),
+    text-shadow 520ms var(--ease-cinematic),
+    filter 520ms var(--ease-cinematic);
+}
+
+.header-signoff__toggle {
+  display: grid;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.header-signoff__dial {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 2px);
   gap: 4px;
@@ -119,6 +137,22 @@ site-header {
   height: 36px;
   border: 1px solid rgba(255, 247, 237, 0.38);
   border-radius: 50%;
+  transition:
+    color 420ms var(--ease-cinematic),
+    border-color 420ms var(--ease-cinematic),
+    box-shadow 480ms var(--ease-cinematic),
+    transform 520ms var(--ease-cinematic);
+}
+
+.header-signoff__dial::before {
+  position: absolute;
+  inset: 5px;
+  content: "";
+  opacity: 0;
+  border: 1px solid rgba(255, 235, 205, 0.34);
+  border-radius: inherit;
+  transform: scale(0.86);
+  transition: opacity 420ms var(--ease-cinematic), transform 520ms var(--ease-cinematic);
 }
 
 .header-signoff b {
@@ -126,6 +160,42 @@ site-header {
   height: 2px;
   border-radius: 50%;
   background: currentColor;
+}
+
+.header-signoff__toggle:hover .header-signoff__dial {
+  border-color: rgba(255, 247, 237, 0.64);
+}
+
+.header-signoff__toggle:active .header-signoff__dial {
+  transform: rotate(6deg) scale(0.97);
+}
+
+.header-signoff__toggle:focus-visible {
+  outline: 1px solid rgba(255, 247, 237, 0.86);
+  outline-offset: 6px;
+  border-radius: 50%;
+}
+
+.header-signoff.is-on .header-signoff__message {
+  color: rgba(255, 248, 238, 0.98);
+  text-shadow:
+    0 0 8px rgba(255, 235, 205, 0.32),
+    0 0 24px rgba(255, 210, 156, 0.22);
+  filter: brightness(1.08);
+}
+
+.header-signoff.is-on .header-signoff__dial {
+  color: rgba(255, 248, 238, 0.98);
+  border-color: rgba(255, 241, 222, 0.72);
+  box-shadow:
+    inset 0 0 14px rgba(255, 220, 174, 0.1),
+    0 0 18px rgba(255, 211, 153, 0.12);
+  transform: rotate(45deg) scale(1.025);
+}
+
+.header-signoff.is-on .header-signoff__dial::before {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media (max-width: 760px) {
@@ -162,11 +232,29 @@ site-header {
   .header-signoff {
     display: none;
   }
+
+  .header-signoff--interactive {
+    position: absolute;
+    top: 48px;
+    right: 0;
+    display: flex;
+    gap: 12px;
+    font-size: 7px;
+    line-height: 1.65;
+  }
+
+  .header-signoff__dial {
+    width: 34px;
+    height: 34px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .primary-nav a,
-  .primary-nav a::after {
+  .primary-nav a::after,
+  .header-signoff__message,
+  .header-signoff__dial,
+  .header-signoff__dial::before {
     transition-duration: 0.001ms;
   }
 }

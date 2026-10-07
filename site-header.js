@@ -4,6 +4,7 @@ class CharlesSiteHeader extends HTMLElement {
 
     const activePage = this.getAttribute("active") ?? "";
     const rootPath = this.getAttribute("root") ?? ".";
+    const hasInteractiveSignoff = this.hasAttribute("interactive-signoff");
     const fromRoot = (path) => `${rootPath}/${path}`;
     const navigation = [
       { id: "work", label: "Work", href: fromRoot("work.html") },
@@ -18,6 +19,20 @@ class CharlesSiteHeader extends HTMLElement {
       })
       .join("");
 
+    const signoffControl = hasInteractiveSignoff
+      ? `
+          <button
+            class="header-signoff__toggle"
+            type="button"
+            aria-label="Turn on the headline"
+            aria-pressed="false"
+          >
+            <span class="sr-only">Toggle headline illumination</span>
+            <span class="header-signoff__dial" aria-hidden="true"><b></b><b></b><b></b><b></b></span>
+          </button>
+        `
+      : `<i class="header-signoff__dial" aria-hidden="true"><b></b><b></b><b></b><b></b></i>`;
+
     this.innerHTML = `
       <div class="header-scrim" aria-hidden="true"></div>
       <header class="site-header">
@@ -31,14 +46,26 @@ class CharlesSiteHeader extends HTMLElement {
           />
         </a>
         <nav class="primary-nav" aria-label="Primary navigation">${links}</nav>
-        <div class="header-signoff">
-          <span>Design a more<br />human tomorrow</span>
-          <i aria-hidden="true"><b></b><b></b><b></b><b></b></i>
+        <div class="header-signoff${hasInteractiveSignoff ? " header-signoff--interactive" : ""}">
+          <span class="header-signoff__message">Design a more<br />human tomorrow</span>
+          ${signoffControl}
         </div>
       </header>
     `;
 
     this.dataset.ready = "true";
+
+    if (hasInteractiveSignoff) {
+      const signoff = this.querySelector(".header-signoff");
+      const toggle = this.querySelector(".header-signoff__toggle");
+
+      toggle.addEventListener("click", () => {
+        const isOn = toggle.getAttribute("aria-pressed") !== "true";
+        toggle.setAttribute("aria-pressed", String(isOn));
+        toggle.setAttribute("aria-label", isOn ? "Turn off the headline" : "Turn on the headline");
+        signoff.classList.toggle("is-on", isOn);
+      });
+    }
   }
 }
 
