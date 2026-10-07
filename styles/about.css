@@ -70,7 +70,7 @@ body {
 .about-copy {
   position: relative;
   z-index: 3;
-  width: min(58vw, 860px);
+  width: min(68vw, 1040px);
   padding-top: clamp(142px, 16vh, 178px);
   margin-left: var(--page-gutter);
   text-shadow: 0 3px 26px rgba(0, 0, 0, 0.62);
@@ -88,11 +88,11 @@ body {
 
 .about-copy h1 {
   margin: 0;
-  max-width: 850px;
+  max-width: 1000px;
   font-family: var(--font-display);
-  font-size: var(--type-page-h1);
+  font-size: clamp(48px, 4.5vw, 72px);
   font-weight: 500;
-  line-height: 0.99;
+  line-height: 1.04;
   letter-spacing: -0.05em;
   text-wrap: balance;
 }
@@ -165,7 +165,7 @@ body {
 
 @media (max-width: 1100px) {
   .about-copy {
-    width: min(68vw, 760px);
+    width: min(78vw, 820px);
   }
 
   .about-stat {
@@ -202,9 +202,9 @@ body {
   }
 
   .about-copy h1 {
-    max-width: 14ch;
-    font-size: clamp(38px, 10.8vw, 52px);
-    line-height: 1;
+    max-width: 16ch;
+    font-size: clamp(36px, 9.6vw, 48px);
+    line-height: 1.06;
   }
 
   .about-summary {
