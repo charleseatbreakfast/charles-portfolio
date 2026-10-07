@@ -111,29 +111,34 @@
   transform: translate(-50%, -50%);
 }
 
-.media-placeholder--motion-splash .fortress-motion-preview__stage video {
-  height: 70%;
-}
-
 .media-placeholder--motion-splash .fortress-motion-preview__stage {
   background: url("../assets/projects/fortress/splash-stage-sky.png") center / cover no-repeat;
+}
+
+.media-placeholder--motion-splash .fortress-motion-preview__stage img,
+.media-placeholder--motion-loading .fortress-motion-preview__stage img {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: auto;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.media-placeholder--motion-splash .fortress-motion-preview__stage img {
+  height: 78%;
 }
 
 .media-placeholder--motion-onboarding .fortress-motion-preview__stage video {
   height: 110%;
   max-height: none;
-  clip-path: inset(9% 0);
+  border-radius: 28px;
+  clip-path: inset(9% 0 round 28px);
 }
 
 .media-placeholder--motion-loading .fortress-motion-preview__stage img {
-  position: absolute;
-  inset: 50% auto auto 50%;
-  width: auto;
-  height: 140%;
-  max-width: none;
-  max-height: none;
-  object-fit: contain;
-  transform: translate(-50%, -50%);
+  height: 46%;
 }
 
 .media-placeholder--motion-preview .media-placeholder__fallback {
