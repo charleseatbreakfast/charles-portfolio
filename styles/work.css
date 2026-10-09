@@ -172,8 +172,7 @@ body {
 .work-panel__index,
 .work-panel__descriptor,
 .work-panel__action,
-.work-panel__status,
-.work-panel__scope {
+.work-panel__status {
   font-family: var(--font-ui);
   text-transform: uppercase;
 }
@@ -255,14 +254,6 @@ body {
   font-size: 1.2em;
   font-weight: 400;
   transition: transform var(--duration-state) var(--ease-cinematic);
-}
-
-.work-panel__scope {
-  margin: var(--space-4) 0 0;
-  color: rgba(245, 239, 230, 0.48);
-  font-size: clamp(8px, 0.65vw, 10px);
-  letter-spacing: 0.1em;
-  line-height: 1.55;
 }
 
 .work-panel__evaluation-mark {
@@ -352,6 +343,60 @@ body {
   outline-offset: -6px;
 }
 
+.work-progress-cursor {
+  --cursor-x: -200px;
+  --cursor-y: -200px;
+  --cursor-offset-x: 18px;
+  --cursor-offset-y: 18px;
+
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 12px;
+  pointer-events: none;
+  opacity: 0;
+  border: 1px solid rgba(216, 201, 180, 0.42);
+  background: rgba(18, 15, 13, 0.9);
+  color: rgba(245, 239, 230, 0.88);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transform:
+    translate3d(var(--cursor-x), var(--cursor-y), 0)
+    translate(var(--cursor-offset-x), var(--cursor-offset-y))
+    scale(0.96);
+  transition: opacity 180ms ease, transform 220ms var(--ease-cinematic);
+}
+
+.work-progress-cursor span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-paper-muted);
+  box-shadow: 0 0 10px rgba(216, 201, 180, 0.32);
+}
+
+.work-progress-cursor.is-visible {
+  opacity: 1;
+  transform:
+    translate3d(var(--cursor-x), var(--cursor-y), 0)
+    translate(var(--cursor-offset-x), var(--cursor-offset-y))
+    scale(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .work-panel--evaluation .work-panel__static {
+    cursor: none;
+  }
+}
+
 @keyframes work-backdrop-reveal {
   from { opacity: 0; filter: saturate(0.68) brightness(0.4); }
   to { opacity: 1; filter: saturate(0.68) brightness(0.62); }
@@ -363,6 +408,10 @@ body {
 }
 
 @media (max-width: 900px), (hover: none) {
+  .work-progress-cursor {
+    display: none;
+  }
+
   .work-page {
     overflow: visible;
   }
