@@ -10,6 +10,10 @@
   --color-paper-muted: #c7b59d;
   --color-ink: #241b16;
   --color-line-warm: rgba(231, 209, 180, 0.24);
+  --status-cursor-bg: rgba(18, 15, 13, 0.9);
+  --status-cursor-border: rgba(216, 201, 180, 0.42);
+  --status-cursor-text: rgba(245, 239, 230, 0.88);
+  --status-cursor-dot: #d8c9b4;
 
   /* Typography */
   --font-display: Georgia, "Times New Roman", serif;

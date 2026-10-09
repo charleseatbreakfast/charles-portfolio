@@ -4,7 +4,6 @@ class CharlesSiteHeader extends HTMLElement {
 
     const activePage = this.getAttribute("active") ?? "";
     const rootPath = this.getAttribute("root") ?? ".";
-    const hasInteractiveSignoff = this.hasAttribute("interactive-signoff");
     const fromRoot = (path) => `${rootPath}/${path}`;
     const navigation = [
       { id: "work", label: "Work", href: fromRoot("work.html") },
@@ -19,20 +18,6 @@ class CharlesSiteHeader extends HTMLElement {
       })
       .join("");
 
-    const signoffControl = hasInteractiveSignoff
-      ? `
-          <button
-            class="header-signoff__toggle"
-            type="button"
-            aria-label="Turn on the headline"
-            aria-pressed="false"
-          >
-            <span class="sr-only">Toggle headline illumination</span>
-            <span class="header-signoff__dial" aria-hidden="true"><b></b><b></b><b></b><b></b></span>
-          </button>
-        `
-      : `<i class="header-signoff__dial" aria-hidden="true"><b></b><b></b><b></b><b></b></i>`;
-
     this.innerHTML = `
       <div class="header-scrim" aria-hidden="true"></div>
       <header class="site-header">
@@ -46,26 +31,59 @@ class CharlesSiteHeader extends HTMLElement {
           />
         </a>
         <nav class="primary-nav" aria-label="Primary navigation">${links}</nav>
-        <div class="header-signoff${hasInteractiveSignoff ? " header-signoff--interactive" : ""}">
+        <div class="header-signoff header-signoff--interactive">
           <span class="header-signoff__message">Design a more<br />human tomorrow</span>
-          ${signoffControl}
+          <button
+            class="header-signoff__toggle"
+            type="button"
+            aria-label="Turn on the headline"
+            aria-pressed="false"
+          >
+            <span class="sr-only">Toggle headline illumination</span>
+            <span class="header-signoff__dial" aria-hidden="true"><b></b><b></b><b></b><b></b></span>
+          </button>
         </div>
       </header>
     `;
 
     this.dataset.ready = "true";
 
-    if (hasInteractiveSignoff) {
-      const signoff = this.querySelector(".header-signoff");
-      const toggle = this.querySelector(".header-signoff__toggle");
+    const signoff = this.querySelector(".header-signoff");
+    const toggle = this.querySelector(".header-signoff__toggle");
+    const storageKey = "charles-signoff-light";
+    const readStoredState = () => {
+      try {
+        return window.localStorage.getItem(storageKey) === "on";
+      } catch {
+        return false;
+      }
+    };
+    const applyState = (isOn, persist = false) => {
+      toggle.setAttribute("aria-pressed", String(isOn));
+      toggle.setAttribute("aria-label", isOn ? "Turn off the headline" : "Turn on the headline");
+      signoff.classList.toggle("is-on", isOn);
+      if (!persist) return;
 
-      toggle.addEventListener("click", () => {
-        const isOn = toggle.getAttribute("aria-pressed") !== "true";
-        toggle.setAttribute("aria-pressed", String(isOn));
-        toggle.setAttribute("aria-label", isOn ? "Turn off the headline" : "Turn on the headline");
-        signoff.classList.toggle("is-on", isOn);
-      });
-    }
+      try {
+        window.localStorage.setItem(storageKey, isOn ? "on" : "off");
+      } catch {
+        // The visual toggle still works if storage is unavailable.
+      }
+    };
+
+    applyState(readStoredState());
+    toggle.addEventListener("click", () => {
+      applyState(toggle.getAttribute("aria-pressed") !== "true", true);
+    });
+
+    this.storageListener = (event) => {
+      if (event.key === storageKey) applyState(event.newValue === "on");
+    };
+    window.addEventListener("storage", this.storageListener);
+  }
+
+  disconnectedCallback() {
+    if (this.storageListener) window.removeEventListener("storage", this.storageListener);
   }
 }
 

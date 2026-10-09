@@ -359,9 +359,9 @@ body {
   padding: 9px 12px;
   pointer-events: none;
   opacity: 0;
-  border: 1px solid rgba(216, 201, 180, 0.42);
-  background: rgba(18, 15, 13, 0.9);
-  color: rgba(245, 239, 230, 0.88);
+  border: 1px solid var(--status-cursor-border);
+  background: var(--status-cursor-bg);
+  color: var(--status-cursor-text);
   font-size: 9px;
   font-weight: 600;
   letter-spacing: 0.15em;
@@ -379,7 +379,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--color-paper-muted);
+  background: var(--status-cursor-dot);
   box-shadow: 0 0 10px rgba(216, 201, 180, 0.32);
 }
 
