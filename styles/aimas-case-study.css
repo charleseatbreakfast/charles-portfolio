@@ -140,6 +140,7 @@
 .aimas-media--performance-video {
   display: grid;
   place-items: center;
+  background: #ededf0;
 }
 
 .aimas-media--performance-video video {
