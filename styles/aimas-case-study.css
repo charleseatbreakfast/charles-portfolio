@@ -137,6 +137,17 @@
   aspect-ratio: 16 / 10;
 }
 
+.aimas-media--performance-video {
+  display: grid;
+  place-items: center;
+}
+
+.aimas-media--performance-video video {
+  width: calc(100% - clamp(2rem, 4.8vw, 4rem));
+  height: calc(100% - clamp(2rem, 4.8vw, 4rem));
+  margin: auto;
+}
+
 .aimas-media--future-wide {
   aspect-ratio: 16 / 10;
 }
