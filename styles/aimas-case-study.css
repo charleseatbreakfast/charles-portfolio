@@ -43,10 +43,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.aimas-page .project-meta__status {
-  grid-column: 1 / -1;
-}
-
 .aimas-media {
   position: relative;
   overflow: hidden;
@@ -629,10 +625,6 @@
 
   .aimas-page .project-meta {
     grid-template-columns: 1fr;
-  }
-
-  .aimas-page .project-meta__status {
-    grid-column: auto;
   }
 
   .architecture-shift {
