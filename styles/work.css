@@ -113,10 +113,9 @@ body {
 .work-panel--parknshop { --panel-accent: #6e8fc8; }
 .work-panel--fortress { --panel-accent: #f47a3a; }
 .work-panel--aimas { --panel-accent: #79c8c0; }
-.work-panel--evaluation { --panel-accent: var(--color-paper-muted); }
+.work-panel--workshop { --panel-accent: #d5a15f; }
 
-.work-panel__link,
-.work-panel__static {
+.work-panel__link {
   position: relative;
   display: block;
   width: 100%;
@@ -171,8 +170,7 @@ body {
 
 .work-panel__index,
 .work-panel__descriptor,
-.work-panel__action,
-.work-panel__status {
+.work-panel__action {
   font-family: var(--font-ui);
   text-transform: uppercase;
 }
@@ -237,50 +235,11 @@ body {
 }
 
 .work-panel__action,
-.work-panel__status {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  margin-top: var(--space-5);
-  color: var(--panel-accent);
-  font-size: clamp(9px, 0.72vw, 11px);
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  line-height: 1.4;
-}
-
 .work-panel__action b {
   margin-left: var(--space-2);
   font-size: 1.2em;
   font-weight: 400;
   transition: transform var(--duration-state) var(--ease-cinematic);
-}
-
-.work-panel__evaluation-mark {
-  position: absolute;
-  top: 19%;
-  right: 15%;
-  left: 15%;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(28px, 72px));
-  gap: clamp(22px, 3vw, 46px);
-  justify-content: center;
-  opacity: 0.28;
-  transition:
-    opacity 520ms ease,
-    transform 620ms var(--ease-cinematic);
-}
-
-.work-panel__evaluation-mark span {
-  aspect-ratio: 1;
-  border: 1px solid color-mix(in srgb, var(--panel-accent) 64%, transparent);
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--panel-accent) 7%, transparent);
-}
-
-.work-panel__evaluation-mark span:nth-child(2),
-.work-panel__evaluation-mark span:nth-child(3) {
-  border-radius: 3px;
 }
 
 .work-panels:has(.work-panel:is(:hover, :focus-within)) .work-panel {
@@ -333,68 +292,9 @@ body {
   transform: translateX(5px);
 }
 
-.work-panel:is(:hover, :focus-within) .work-panel__evaluation-mark {
-  opacity: 0.5;
-  transform: translateY(-4px);
-}
-
 .work-panel__link:focus-visible {
   outline: 1px solid var(--panel-accent);
   outline-offset: -6px;
-}
-
-.work-progress-cursor {
-  --cursor-x: -200px;
-  --cursor-y: -200px;
-  --cursor-offset-x: 18px;
-  --cursor-offset-y: 18px;
-
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  padding: 9px 12px;
-  pointer-events: none;
-  opacity: 0;
-  border: 1px solid var(--status-cursor-border);
-  background: var(--status-cursor-bg);
-  color: var(--status-cursor-text);
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
-  line-height: 1;
-  text-transform: uppercase;
-  white-space: nowrap;
-  transform:
-    translate3d(var(--cursor-x), var(--cursor-y), 0)
-    translate(var(--cursor-offset-x), var(--cursor-offset-y))
-    scale(0.96);
-  transition: opacity 180ms ease, transform 220ms var(--ease-cinematic);
-}
-
-.work-progress-cursor span {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--status-cursor-dot);
-  box-shadow: 0 0 10px rgba(216, 201, 180, 0.32);
-}
-
-.work-progress-cursor.is-visible {
-  opacity: 1;
-  transform:
-    translate3d(var(--cursor-x), var(--cursor-y), 0)
-    translate(var(--cursor-offset-x), var(--cursor-offset-y))
-    scale(1);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .work-panel--evaluation .work-panel__static {
-    cursor: none;
-  }
 }
 
 @keyframes work-backdrop-reveal {
@@ -408,10 +308,6 @@ body {
 }
 
 @media (max-width: 900px), (hover: none) {
-  .work-progress-cursor {
-    display: none;
-  }
-
   .work-page {
     overflow: visible;
   }
@@ -485,18 +381,9 @@ body {
     font-size: 14px;
   }
 
-  .work-panel__action,
-  .work-panel__status {
+  .work-panel__action {
     margin-top: 18px;
     font-size: 10px;
-  }
-
-  .work-panel__evaluation-mark {
-    top: 10%;
-    right: 24%;
-    left: 24%;
-    grid-template-columns: repeat(2, minmax(34px, 68px));
-    opacity: 0.38;
   }
 }
 
@@ -512,9 +399,6 @@ body {
     inset: 5% 5% 47%;
   }
 
-  .work-panel--evaluation {
-    min-height: 580px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -528,8 +412,7 @@ body {
   .work-panel__shade,
   .work-panel h2,
   .work-panel__reveal,
-  .work-panel__action b,
-  .work-panel__evaluation-mark {
+  .work-panel__action b {
     transition-duration: 0.001ms;
   }
 }

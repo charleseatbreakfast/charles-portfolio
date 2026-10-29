@@ -1,0 +1,280 @@
+.refund-workshop-page {
+  --project-accent: #d5a15f;
+  --project-accent-soft: rgba(222, 176, 115, 0.82);
+}
+
+.refund-workshop-page .case-study-hero::before {
+  filter: blur(1.4px) brightness(0.42) saturate(0.62) sepia(0.2);
+}
+
+.refund-workshop-page .case-study-hero::after {
+  background:
+    linear-gradient(90deg, rgba(10, 8, 7, 0.99) 0%, rgba(14, 10, 8, 0.94) 42%, rgba(24, 16, 10, 0.68) 72%, rgba(17, 12, 9, 0.82) 100%),
+    linear-gradient(180deg, rgba(10, 8, 7, 0.48) 0%, rgba(16, 11, 8, 0.2) 48%, var(--color-bg) 100%);
+}
+
+.refund-hero-visual img {
+  object-position: center;
+}
+
+.refund-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+  border-top: 1px solid var(--color-line-warm);
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.refund-metrics div {
+  min-height: 180px;
+  padding: clamp(28px, 4vw, 56px);
+}
+
+.refund-metrics div + div {
+  border-left: 1px solid var(--color-line-warm);
+}
+
+.refund-metrics dt,
+.refund-output-counts dt {
+  color: var(--project-accent-soft);
+  font-family: var(--font-display);
+  font-size: clamp(52px, 7vw, 96px);
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.refund-metrics dd,
+.refund-output-counts dd {
+  margin: var(--space-5) 0 0;
+  color: var(--color-text-muted);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.refund-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: var(--case-section-inner-gap);
+  border-top: 1px solid var(--color-line-warm);
+}
+
+.refund-facts > div {
+  padding: var(--space-6) clamp(var(--space-4), 3vw, var(--space-7)) var(--space-7);
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.refund-facts > div + div {
+  border-left: 1px solid var(--color-line-warm);
+}
+
+.refund-facts span {
+  display: block;
+  margin-bottom: var(--space-6);
+  color: var(--project-accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.refund-facts strong {
+  display: block;
+  color: var(--color-text);
+  font-family: var(--font-display);
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
+.refund-facts p {
+  max-width: 32rem;
+  margin: var(--space-4) 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.refund-media {
+  margin: 0;
+}
+
+.refund-media img {
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(231, 209, 180, 0.2);
+  background: #f4f1ec;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.24);
+}
+
+.refund-media figcaption {
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-line-warm);
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.refund-media--wide img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.refund-media--paper img {
+  background: #fff;
+}
+
+.refund-pain-points {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: var(--case-section-inner-gap) 0 0;
+  padding: 0;
+  border-top: 1px solid var(--color-line-warm);
+  list-style: none;
+}
+
+.refund-pain-points li {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-6) clamp(var(--space-4), 2.5vw, var(--space-7));
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.refund-pain-points li + li {
+  border-left: 1px solid var(--color-line-warm);
+}
+
+.refund-pain-points span {
+  color: var(--project-accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.refund-pain-points h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(24px, 2.3vw, 36px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.refund-pain-points p {
+  margin: var(--space-4) 0 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.refund-output-grid,
+.refund-priority-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(var(--space-7), 6vw, 96px);
+  align-items: start;
+}
+
+.refund-output-counts {
+  display: grid;
+  margin: 0;
+}
+
+.refund-output-counts div {
+  padding: var(--space-6) 0;
+  border-top: 1px solid var(--color-line-warm);
+}
+
+.refund-output-counts div:last-child {
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.refund-output-counts dt {
+  font-size: clamp(48px, 5.5vw, 76px);
+}
+
+.refund-flow-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(var(--space-5), 3vw, var(--space-7));
+  margin-top: var(--case-section-inner-gap);
+}
+
+.refund-priority-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--color-line-warm);
+  list-style: none;
+}
+
+.refund-priority-list li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-line-warm);
+}
+
+.refund-priority-list span {
+  color: var(--project-accent);
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.refund-priority-list p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.refund-workshop-page .editorial-summary__accent {
+  color: var(--project-accent-soft);
+}
+
+@media (max-width: 900px) {
+  .refund-metrics,
+  .refund-facts,
+  .refund-pain-points,
+  .refund-output-grid,
+  .refund-priority-layout,
+  .refund-flow-comparison {
+    grid-template-columns: 1fr;
+  }
+
+  .refund-metrics div,
+  .refund-facts > div {
+    min-height: 0;
+  }
+
+  .refund-metrics div + div,
+  .refund-facts > div + div,
+  .refund-pain-points li + li {
+    border-left: 0;
+    border-top: 1px solid var(--color-line-warm);
+  }
+
+  .refund-output-grid,
+  .refund-priority-layout {
+    gap: var(--case-section-inner-gap);
+  }
+}
+
+@media (max-width: 620px) {
+  .refund-metrics div {
+    padding: var(--space-6) 0;
+  }
+
+  .refund-facts > div,
+  .refund-pain-points li {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .refund-media figcaption {
+    font-size: 11px;
+  }
+}
